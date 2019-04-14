@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
+             xmlns:local="clr-namespace:Panda_Kakei"
+             x:Class="Panda_Kakei.Views.ExcelPrintPage"
+             Title="{local:Translate ExcelReportText}"
+             >
+    <ContentPage.Content>
+
+        <Grid Padding="15, 25, 15, 15" RowSpacing="15">
+            <!--<Label Text="{local:Translate ExcelFilePathLabelText}" Grid.Row="0" Grid.Column="0" 
+                   HorizontalOptions="Center" VerticalTextAlignment="Center" />
+            <Entry x:Name="entryExcelPath" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="1"
+                   TextChanged="entryExcelPath_TextChanged" />-->
+            <Label Text="{local:Translate StartPeriodText}" Grid.Row="0" HorizontalOptions="Center" VerticalTextAlignment="End"
+                   Grid.ColumnSpan="2" />
+            <Button x:Name="btnStartDate" Clicked="btnStartDate_Clicked" HorizontalOptions="Center" BindingContext="{Binding Source = {local:Models.DatePickerViewModel}}"
+                Text="{Binding StartDate}" HeightRequest="30" WidthRequest="300" Grid.Row="1" Grid.ColumnSpan="2" />
+            <local:CustomDatePicker x:Name="startDatePicker" PickerMode="Dialog" BindingContext="{Binding Source = {local:Models.DatePickerViewModel}}"
+                SelectedItem="{Binding StartDate}" OkButtonClicked="startDatePicker_OkButtonClicked"
+                CancelButtonClicked="startDatePicker_CancelButtonClicked" Grid.Row="0" Grid.RowSpan="6" Grid.ColumnSpan="2" />
+            <local:CustomDatePicker x:Name="endDatePicker" PickerMode="Dialog" BindingContext="{Binding Source = {local:Models.DatePickerViewModel}}"
+                SelectedItem="{Binding EndDate}" OkButtonClicked="endDatePicker_OkButtonClicked"
+                CancelButtonClicked="endDatePicker_CancelButtonClicked" Grid.Row="0" Grid.RowSpan="6" Grid.ColumnSpan="2" />
+            <Label Text="{local:Translate EndPeriodText}" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalTextAlignment="End" />
+            <Button x:Name="btnEndDate" Clicked="btnEndDate_Clicked" HorizontalOptions="Center" BindingContext="{Binding Source = {local:Models.DatePickerViewModel}}"
+                Text="{Binding EndDate}" HeightRequest="30" WidthRequest="300" Grid.Row="3" Grid.ColumnSpan="2" />
+            <Button x:Name="btnGenerate" Clicked="btnGenerate_ClickedAsync" HorizontalOptions="Center"
+                Text="{local:Translate ReportText}" Grid.Row="4" Grid.ColumnSpan="2" />
+        </Grid>
+        <!--<StackLayout>
+            <Button x:Name="btnStartDate" Clicked="btnStartDate_Clicked" HorizontalOptions="Center" BindingContext="{Binding Source = {local:DatePickerViewModel}}"
+                Text="{Binding StartDate}" HeightRequest="30" WidthRequest="300" />
+            <local:CustomDatePicker x:Name="startDatePicker" PickerMode="Dialog" BindingContext="{Binding Source = {local:DatePickerViewModel}}"
+                SelectedItem="{Binding StartDate}" OkButtonClicked="startDatePicker_OkButtonClicked"
+                CancelButtonClicked="startDatePicker_CancelButtonClicked" />
+
+            <Button x:Name="btnEndDate" Clicked="btnEndDate_Clicked" HorizontalOptions="Center" BindingContext="{Binding Source = {local:DatePickerViewModel}}"
+                Text="{Binding EndDate}" HeightRequest="30" WidthRequest="300" />
+            <local:CustomDatePicker x:Name="endDatePicker" PickerMode="Dialog" BindingContext="{Binding Source = {local:DatePickerViewModel}}"
+                SelectedItem="{Binding EndDate}" OkButtonClicked="endDatePicker_OkButtonClicked"
+                CancelButtonClicked="endDatePicker_CancelButtonClicked" />
+
+        </StackLayout>-->
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Panda_Kakei"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
+             x:Class="Panda_Kakei.Views.ViewDataPage"
+             Title="{local:Translate ViewDataText}"
+             >
+    <ContentPage.Content>
+        <!--<StackLayout Padding="15, 25, 15, 15" Spacing="15">
+            <DatePicker Format="D" DateSelected="datePicker_OnDateSelected" />
+        </StackLayout>-->
+
+        <Grid Padding="15, 25, 15, 15" RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.5*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!--<Button x:Name="btnPreviousMonth" FontFamily="Segoe MDL2 Assets" Text="&#xE76B;" 
+                        Clicked="btnPreviousMonth_Clicked" Grid.Row="0"  Grid.Column="1" />-->
+                <Button x:Name="btnPreviousMonth" Text="&#xF053;"  Clicked="btnPreviousMonth_Clicked" Grid.Row="0"  Grid.Column="1" >
+                    <Button.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String" 
+                                    Android="fa-solid-900.ttf#Font Awesome 5 Free Solid" 
+                                    iOS="Font Awesome 5 Free" 
+                                    WinPhone="Assets/fa-solid-900.ttf#Font Awesome 5 Free Solid" />
+                    </Button.FontFamily>
+                </Button>
+                <Button x:Name="btnSetDate" Clicked="btnSetDate_Clicked" HorizontalOptions="CenterAndExpand"  
+                        BindingContext="{Binding Source = {local:Models.DatePickerViewModel}}"
+                        Text="{Binding StartDate}" WidthRequest="300" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" />
+                <!--<Button x:Name="btnNextMonth" FontFamily="Segoe MDL2 Assets" Text="&#xE76C;" 
+                        Clicked="btnNextMonth_Clicked" Grid.Row="0" Grid.Column="4" />-->
+                <Button x:Name="btnNextMonth" Text="&#xF054;" Clicked="btnNextMonth_Clicked" Grid.Row="0" Grid.Column="4" >
+                    <Button.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String" 
+                                    Android="fa-solid-900.ttf#Font Awesome 5 Free Solid" 
+                                    iOS="Font Awesome 5 Free" 
+                                    WinPhone="Assets/fa-solid-900.ttf#Font Awesome 5 Free Solid" />
+                    </Button.FontFamily>
+                </Button>
+                <Picker x:Name="pickerSort" BindingContext="{Binding Source = {local:Models.SortOptionModel}}" ItemsSource="{Binding SortOptions}" ItemDisplayBinding="{Binding Name}" 
+                    SelectedIndexChanged="pickerSort_SelectedIndexChanged"
+                    Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="1" />
+                <!--<Button x:Name="btnSortAscDesc" FontFamily="Segoe MDL2 Assets" Text="&#xE70E;"
+                        Clicked="btnSortAscDesc_Clicked" Grid.Row="1" Grid.Column="5" />-->
+                <Button x:Name="btnSortAscDesc" Text="&#xF077;" Clicked="btnSortAscDesc_Clicked" 
+                        Grid.Row="1" Grid.Column="5" >
+                    <Button.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String" 
+                                    Android="fa-solid-900.ttf#Font Awesome 5 Free Solid" 
+                                    iOS="Font Awesome 5 Free" 
+                                    WinPhone="Assets/fa-solid-900.ttf#Font Awesome 5 Free Solid" />
+                    </Button.FontFamily>
+                </Button>
+            </Grid>
+            
+            <local:CustomDatePicker x:Name="datePicker" PickerMode="Dialog" BindingContext="{Binding Source = {local:Models.DatePickerViewModel}}"
+                SelectedItem="{Binding StartDate}" Grid.ColumnSpan="5" Grid.RowSpan="6" OkButtonClicked="datePicker_OkButtonClicked"
+                CancelButtonClicked="datePicker_CancelButtonClicked" />
+            <Label Text="{local:Translate CategoryText}" Grid.Row="2" Grid.Column="1" />
+            <Label Text="{local:Translate AmountText}" Grid.Row="2" Grid.Column="2" />
+            <Label Text="{local:Translate MemoText}" Grid.Row="2" Grid.Column="3" />
+            <Label Text="{local:Translate DateText}" Grid.Row="2" Grid.Column="4" />
+            <ListView x:Name="listViewItems" ItemsSource="{Binding Items}" ItemSelected="listViewItems_ItemSelected"
+                      Grid.Row="3" Grid.ColumnSpan="5">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Text="{Binding TypeText}" Grid.Column="0" />
+                                <Label Text="{Binding CategoryText}" Grid.Column="1" />
+                                <Label Text="{Binding AmountText}" Grid.Column="2" />
+                                <Label Text="{Binding MemoText}" Grid.Column="3" />
+                                <Label Text="{Binding DateText}" Grid.Column="4" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Grid Grid.Row="4" Grid.ColumnSpan="5" Grid.RowSpan="2" >
+                <!--<Label Text="{local:Translate IncomeLabelText} " Grid.Column="0" />
+                <Label x:Name="lblIncome" Grid.Column="1" />
+                <Label  Text="{local:Translate ExpenseLabelText} " Grid.Column="2" />
+                <Label x:Name="lblExpense" Grid.Column="3" />
+                <Label Text="{local:Translate BalanceLabelText} " Grid.Column="4" />
+                <Label x:Name="lblBalance" Grid.Column="5" />-->
+
+                <Label x:Name="lblIncome" Text="{local:Translate IncomeLabelText} " Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" />
+                <Label x:Name="lblExpense" Text="{local:Translate ExpenseLabelText} " Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3" />
+                <Label x:Name="lblBalance" Text="{local:Translate BalanceLabelText} " Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" />
+            </Grid>
+            <!--<Label x:Name="lblIncome" Text="{local:Translate IncomeLabelText} " Grid.Row="3" Grid.Column="0" />
+            <Label x:Name="lblExpense" Text="{local:Translate ExpenseLabelText} " Grid.Row="3" Grid.Column="1" />
+            <Label x:Name="lblBalance" Text="{local:Translate BalanceLabelText} " Grid.Row="3" Grid.Column="2" />-->
+            <Button x:Name="btnEdit" Text="{local:Translate EditText}" IsEnabled="False" Clicked="btnEdit_Clicked"
+                    Grid.Row="6" Grid.Column="3" />
+            <Button x:Name="btnRemove" Text="{local:Translate RemoveText}" IsEnabled="False" Clicked="btnRemove_ClickedAsync"
+                    Grid.Row="6" Grid.Column="4" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

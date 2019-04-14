@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Panda_Kakei"
+             x:Class="Panda_Kakei.Views.SettingsPage"
+             Title="{local:Translate SettingsText}">
+    
+    <ContentPage.Content>
+        <Grid Padding="15, 25, 15, 15" RowSpacing="15" >
+            <!--<Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>-->
+            
+            <!--<Button x:Name="btnEndDate" Text="{local:Translate EndDateSettingText}"
+                    VerticalOptions="Center" Clicked="btnEndDate_OnClicked" />-->
+            <!--<Button x:Name="btnChangeColour" Text="{local:Translate ChangeColourSettingText}" 
+                    VerticalOptions="Center" Clicked="btnChangeColour_OnClicked" Grid.Row="0" Grid.ColumnSpan="2" />-->
+            <!--<Label x:Name="lblShowDbPath" Text="{local:Translate ExtDbPathText}" 
+                    VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" />
+            <Entry x:Name="entryExtDbPath" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="1"
+                   IsEnabled="False" />-->
+            <Label Text="{local:Translate CurrencySettingText}" VerticalOptions="Center" HorizontalOptions="Center"
+                   Grid.Row="1" Grid.Column="0" />
+            <Entry x:Name="entryCurrency" Text="{x:Static local:SharedObject.currencySymbol}" VerticalOptions="Center"
+                   HorizontalOptions="Center" Grid.Row="1" Grid.Column="1" TextChanged="entryCurrency_TextChanged" />
+            <!--<Button x:Name="btnRestoreExtDbPath" Text="{local:Translate ExtDbPathDefaultButtonText}" VerticalOptions="Center"
+                    Clicked="btnRestoreExtDbPath_ClickedAsync" Grid.Row="3" Grid.ColumnSpan="2" />-->
+            <Button x:Name="btnBackup" Text="{local:Translate BackupSettingText}" 
+                    VerticalOptions="Center" Clicked="btnBackup_OnClickedAsync" Grid.Row="2" Grid.ColumnSpan="2" />
+            <Button x:Name="btnReadBackup" Text="{local:Translate ReadBackupSettingText}" 
+                    VerticalOptions="Center" Clicked="btnReadBackup_OnClickedAsync" Grid.Row="3" Grid.ColumnSpan="2" />
+            <Button x:Name="btnResetDatabase" Text="{local:Translate DatabaseResetButtonText}" VerticalOptions="Center"
+                    Clicked="btnResetDatabase_ClickedAsync" Grid.Row="4" Grid.ColumnSpan="2" />
+            <!--<Button x:Name="btnShareFb" Text="{local:Translate ShareFbSettingText}" 
+                    VerticalOptions="Center" Clicked="btnShareFb_OnClicked" />
+            <Button x:Name="btnPay" Text="{local:Translate PaySettingText}" 
+                    VerticalOptions="Center" Clicked="btnPay_OnClicked" />-->
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

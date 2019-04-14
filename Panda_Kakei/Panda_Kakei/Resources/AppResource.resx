@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddExpenseText" xml:space="preserve">
+    <value>Add new expense</value>
+    <comment>Button text for adding new expense</comment>
+  </data>
+  <data name="AddIncomeText" xml:space="preserve">
+    <value>Add new income</value>
+    <comment>Button text for adding new income</comment>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>Add</value>
+    <comment>Button text for adding new item</comment>
+  </data>
+  <data name="AlertNeedFileAccessMessageText" xml:space="preserve">
+    <value>File access permission is needed to create a new file.</value>
+    <comment>Message text for display alert when file access is missing</comment>
+  </data>
+  <data name="AlertNeedFileAccessTitleText" xml:space="preserve">
+    <value>File access permission missing</value>
+    <comment>Title text for display alert when file access is missing</comment>
+  </data>
+  <data name="AmountText" xml:space="preserve">
+    <value>Amount</value>
+    <comment>Label text for amount of money</comment>
+  </data>
+  <data name="BackupSettingText" xml:space="preserve">
+    <value>Copy database to external folder</value>
+    <comment>Button text for SD card backup</comment>
+  </data>
+  <data name="BalanceLabelText" xml:space="preserve">
+    <value>Net savings:</value>
+    <comment>Label text for balance</comment>
+  </data>
+  <data name="BalanceText" xml:space="preserve">
+    <value>Net savings</value>
+    <comment>Balance text</comment>
+  </data>
+  <data name="BalanceThisMonthText" xml:space="preserve">
+    <value>Net savings of this month:</value>
+    <comment>Label text for balance of this month</comment>
+  </data>
+  <data name="CancelText" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Button text for cancel</comment>
+  </data>
+  <data name="CategoryNameText" xml:space="preserve">
+    <value>Category name</value>
+    <comment>Label text for new category name</comment>
+  </data>
+  <data name="CategoryText" xml:space="preserve">
+    <value>Category</value>
+    <comment>Label text for category</comment>
+  </data>
+  <data name="ChangeColourSettingText" xml:space="preserve">
+    <value>Change colour </value>
+    <comment>Button text for chaning colour</comment>
+  </data>
+  <data name="CompletedTitleText" xml:space="preserve">
+    <value>Completed</value>
+    <comment>Dialog title text when task completed</comment>
+  </data>
+  <data name="ConfirmTitleText" xml:space="preserve">
+    <value>Confirm</value>
+    <comment>Dialog title text when requiring confirmation</comment>
+  </data>
+  <data name="CurrencySettingText" xml:space="preserve">
+    <value>Currency:</value>
+    <comment>Currency setting text</comment>
+  </data>
+  <data name="CurrencyText" xml:space="preserve">
+    <value>€</value>
+    <comment>Label text for currency</comment>
+  </data>
+  <data name="DatabaseCopyFailedText" xml:space="preserve">
+    <value>Database copy failed.</value>
+    <comment>Dialog text when database export failed</comment>
+  </data>
+  <data name="DatabaseExportConfirmText" xml:space="preserve">
+    <value>Database will be copied to external storage. If a database already exists in the external storage it will be overwritten. Is that ok?</value>
+    <comment>Dialog text confirming database export</comment>
+  </data>
+  <data name="DatabaseExportSuccessText" xml:space="preserve">
+    <value>Database was successfully copied to below file:</value>
+    <comment>Dialog text when database export succeed</comment>
+  </data>
+  <data name="DatabaseImportSuccessText" xml:space="preserve">
+    <value>Loading data from external database completed.</value>
+    <comment>Dialog text when database import failed</comment>
+  </data>
+  <data name="DatabaseResetButtonText" xml:space="preserve">
+    <value>Reset database</value>
+    <comment>Button text for database reset</comment>
+  </data>
+  <data name="DatabaseResetCompleteText" xml:space="preserve">
+    <value>Database reset completed.</value>
+    <comment>Dialog text for database reset complete</comment>
+  </data>
+  <data name="DatabaseResetFailedText" xml:space="preserve">
+    <value>Failed to reset database.</value>
+    <comment>Dialog text for database reset failed</comment>
+  </data>
+  <data name="DatabaseResetWarningText" xml:space="preserve">
+    <value>Are you sure you want to delete all your financial data stored in this app?</value>
+    <comment>Dialog text for database reset warning</comment>
+  </data>
+  <data name="DateText" xml:space="preserve">
+    <value>Date</value>
+    <comment>Label text for date</comment>
+  </data>
+  <data name="DialogExternalDatabaseAccessErrorText" xml:space="preserve">
+    <value>Could not access to external database</value>
+    <comment>Dialog alert text when not able to access external database</comment>
+  </data>
+  <data name="DialogReadBackupWarningText" xml:space="preserve">
+    <value>All data saved locally in the app will be overwritten. Is that ok?</value>
+    <comment>Warning text displayed when reading external database</comment>
+  </data>
+  <data name="DialogRemoveText" xml:space="preserve">
+    <value>Are you sure you want to delete?</value>
+    <comment>Dialog text that is displayed when remove button is hit</comment>
+  </data>
+  <data name="EditExpenseText" xml:space="preserve">
+    <value>Edit expense</value>
+    <comment>Edit expense window title</comment>
+  </data>
+  <data name="EditIncomeText" xml:space="preserve">
+    <value>Edit income</value>
+    <comment>Edit income window title</comment>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Button text for editing item</comment>
+  </data>
+  <data name="EndDateSettingText" xml:space="preserve">
+    <value>Change last day of every month</value>
+    <comment>Button text for last day of month</comment>
+  </data>
+  <data name="EndPeriodText" xml:space="preserve">
+    <value>End period</value>
+    <comment>End period text</comment>
+  </data>
+  <data name="ErrorAmountText" xml:space="preserve">
+    <value>The entered amount is not a valid number.</value>
+    <comment>Display alert text when entered amount is not decimal</comment>
+  </data>
+  <data name="ExcelCurrencyColumnText" xml:space="preserve">
+    <value>Currency</value>
+    <comment>Excel currency column item text</comment>
+  </data>
+  <data name="ExcelFilePathLabelText" xml:space="preserve">
+    <value>Excel file path:</value>
+    <comment>Label text for excel file path</comment>
+  </data>
+  <data name="ExcelPrintErrorMessage" xml:space="preserve">
+    <value>Excel file could not be created.</value>
+    <comment>Dialog message printed when excel print error</comment>
+  </data>
+  <data name="ExcelPrintErrorTitle" xml:space="preserve">
+    <value>Excel Error</value>
+    <comment>Dialog title printed when excel print error</comment>
+  </data>
+  <data name="ExcelReportCompleteText" xml:space="preserve">
+    <value>Excel report was successfully generated on below path:</value>
+    <comment>Excel Report generate complete message</comment>
+  </data>
+  <data name="ExcelReportCompleteTitle" xml:space="preserve">
+    <value>Excel Report Generated</value>
+    <comment>Excel Report generate complete title</comment>
+  </data>
+  <data name="ExcelReportText" xml:space="preserve">
+    <value>Generate Excel report</value>
+    <comment>Button text for excel report</comment>
+  </data>
+  <data name="ExcelTotalizationString" xml:space="preserve">
+    <value>Totalization</value>
+    <comment>Excel sheet title of totalization sheet</comment>
+  </data>
+  <data name="ExpenseByCategoryText" xml:space="preserve">
+    <value>Expense by category</value>
+    <comment>Excel column expense by category string</comment>
+  </data>
+  <data name="ExpenseLabelText" xml:space="preserve">
+    <value>Expense:</value>
+    <comment>Label text for expense</comment>
+  </data>
+  <data name="ExpenseText" xml:space="preserve">
+    <value>Expense</value>
+    <comment>Expense text</comment>
+  </data>
+  <data name="ExpenseThisMonthText" xml:space="preserve">
+    <value>Expense of this month:</value>
+    <comment>Label text for expense of this month</comment>
+  </data>
+  <data name="ExtDbPathDefaultButtonText" xml:space="preserve">
+    <value>Reset external database path to default</value>
+    <comment>Button text for resetting external database path</comment>
+  </data>
+  <data name="ExtDbPathDefaultWarningText" xml:space="preserve">
+    <value>The external database path is edited. The edited information will be lost, is that ok?</value>
+    <comment>Dialog warning text for external database path reset</comment>
+  </data>
+  <data name="ExtDbPathText" xml:space="preserve">
+    <value>Path to external database:</value>
+    <comment>Database path text</comment>
+  </data>
+  <data name="FailedTitleText" xml:space="preserve">
+    <value>Failed</value>
+    <comment>Dialog title text when task failed</comment>
+  </data>
+  <data name="FileAccessTitleText" xml:space="preserve">
+    <value>File access error</value>
+    <comment>File access error text</comment>
+  </data>
+  <data name="HouseholdAccountText" xml:space="preserve">
+    <value>Household account book</value>
+    <comment>Household account text</comment>
+  </data>
+  <data name="IncomeByCategoryText" xml:space="preserve">
+    <value>Income by category</value>
+    <comment>Excel column income by category string</comment>
+  </data>
+  <data name="IncomeLabelText" xml:space="preserve">
+    <value>Income:</value>
+    <comment>Label text for income</comment>
+  </data>
+  <data name="IncomeText" xml:space="preserve">
+    <value>Income</value>
+    <comment>Income text</comment>
+  </data>
+  <data name="IncomeThisMonthText" xml:space="preserve">
+    <value>Income of this month:</value>
+    <comment>Label text for income of this month</comment>
+  </data>
+  <data name="InputErrorText" xml:space="preserve">
+    <value>Input error</value>
+    <comment>Title of alert dialog when input error</comment>
+  </data>
+  <data name="MainPageTitleText" xml:space="preserve">
+    <value>Panda Household Account Book</value>
+    <comment>Title text for main page</comment>
+  </data>
+  <data name="MemoText" xml:space="preserve">
+    <value>Memo</value>
+    <comment>Label text for memo</comment>
+  </data>
+  <data name="MonthText" xml:space="preserve">
+    <value>Month</value>
+    <comment>Month text</comment>
+  </data>
+  <data name="NewCategoryText" xml:space="preserve">
+    <value>New category</value>
+    <comment>Title text for creating new category</comment>
+  </data>
+  <data name="NewText" xml:space="preserve">
+    <value>New</value>
+    <comment>Button text for add new item</comment>
+  </data>
+  <data name="NextText" xml:space="preserve">
+    <value>Next</value>
+    <comment>Next text</comment>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>No</value>
+    <comment>No text</comment>
+  </data>
+  <data name="OkText" xml:space="preserve">
+    <value>Ok</value>
+    <comment>Ok text</comment>
+  </data>
+  <data name="PaySettingText" xml:space="preserve">
+    <value>Pay and remove ads</value>
+    <comment>Button text for paying</comment>
+  </data>
+  <data name="PhotoText" xml:space="preserve">
+    <value>Add a photo</value>
+    <comment>Label text for photo</comment>
+  </data>
+  <data name="PreviousText" xml:space="preserve">
+    <value>Previous</value>
+    <comment>Previous text</comment>
+  </data>
+  <data name="ReadBackupSettingText" xml:space="preserve">
+    <value>Load data from external database</value>
+    <comment>Button text for SD card read backup</comment>
+  </data>
+  <data name="RemoveText" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Button text for removing item</comment>
+  </data>
+  <data name="ReportText" xml:space="preserve">
+    <value>Generate report</value>
+    <comment>Generate report text</comment>
+  </data>
+  <data name="SaveText" xml:space="preserve">
+    <value>Save</value>
+    <comment>Save button text</comment>
+  </data>
+  <data name="SettingsText" xml:space="preserve">
+    <value>Settings</value>
+    <comment>settings title</comment>
+  </data>
+  <data name="ShareFbSettingText" xml:space="preserve">
+    <value>Share the app and remove ads</value>
+    <comment>Button text for sharing app on Facebook</comment>
+  </data>
+  <data name="SortText" xml:space="preserve">
+    <value>Sort</value>
+    <comment>sort text</comment>
+  </data>
+  <data name="StartPeriodText" xml:space="preserve">
+    <value>Start period</value>
+    <comment>Start period text</comment>
+  </data>
+  <data name="TotalText" xml:space="preserve">
+    <value>Total</value>
+    <comment>Total text</comment>
+  </data>
+  <data name="ViewDataText" xml:space="preserve">
+    <value>View data</value>
+    <comment>Button text for viewing data</comment>
+  </data>
+  <data name="YearText" xml:space="preserve">
+    <value>Year</value>
+    <comment>Year text</comment>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>Yes</value>
+    <comment>Yes text</comment>
+  </data>
+</root>

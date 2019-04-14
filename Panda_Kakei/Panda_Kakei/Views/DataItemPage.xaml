@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Panda_Kakei.Views.DataItemPage"
+             xmlns:local="clr-namespace:Panda_Kakei"
+             >
+
+    <ContentPage.Content>
+        <StackLayout Padding="15, 25, 15, 15" Spacing="15">
+            <DatePicker x:Name="datePicker" Format="D" />
+            <Picker x:Name="pickerCategory" ItemsSource="{Binding Categories}" ItemDisplayBinding="{Binding Name}" 
+                    SelectedIndexChanged="pickerCategory_SelectedIndexChanged" Title="{local:Translate CategoryText}" />
+
+            <StackLayout Orientation="Horizontal" Spacing="15" HorizontalOptions="EndAndExpand">
+                <Button x:Name="btnAddCategory" Text="{local:Translate NewCategoryText}" Clicked="btnAddCategory_Clicked" />
+                <Button x:Name="btnRemoveCategory" Text="{local:Translate RemoveText}" Clicked="btnRemoveCategory_ClickedAsync" IsEnabled="False" />
+            </StackLayout>
+
+            <Entry x:Name="entryAmount" Placeholder="{local:Translate AmountText}" TextChanged="entryAmount_TextChanged"
+                   Keyboard="Telephone" />
+            <Entry x:Name="entryMemo" Placeholder="{local:Translate MemoText}" />
+            <!--<Label Text="{local:Translate PhotoText}" />-->
+            <!--<Button x:Name="btnCamera" FontFamily="Segoe MDL2 Assets" Text="&#xE722;" />-->
+            <Button x:Name="btnAdd" Text="{local:Translate AddText}" IsEnabled="False" Clicked="btnAdd_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

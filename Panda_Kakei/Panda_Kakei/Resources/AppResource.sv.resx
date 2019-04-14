@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddExpenseText" xml:space="preserve">
+    <value>Lägg till ny utgift</value>
+    <comment>Button text for adding new expense</comment>
+  </data>
+  <data name="AddIncomeText" xml:space="preserve">
+    <value>Lägg till ny inkomst</value>
+    <comment>Button text for adding new income</comment>
+  </data>
+  <data name="AddText" xml:space="preserve">
+    <value>Lägg till</value>
+    <comment>Button text for adding new item</comment>
+  </data>
+  <data name="AlertNeedFileAccessMessageText" xml:space="preserve">
+    <value>Det går inte skapa ny fil utan tillåtelse av filåtkomst.</value>
+    <comment>Message text for display alert when file access is missing</comment>
+  </data>
+  <data name="AlertNeedFileAccessTitleText" xml:space="preserve">
+    <value>Saknar tillåtelse av filåtkomst</value>
+    <comment>Title text for display alert when file access is missing</comment>
+  </data>
+  <data name="AmountText" xml:space="preserve">
+    <value>Belopp</value>
+    <comment>Label text for amount of money</comment>
+  </data>
+  <data name="BackupSettingText" xml:space="preserve">
+    <value>Kopiera databas till extern map</value>
+    <comment>Button text for SD card backup</comment>
+  </data>
+  <data name="BalanceLabelText" xml:space="preserve">
+    <value>Netto sparande:</value>
+    <comment>Label text for balance</comment>
+  </data>
+  <data name="BalanceText" xml:space="preserve">
+    <value>Netto sparande</value>
+    <comment>Balance text</comment>
+  </data>
+  <data name="BalanceThisMonthText" xml:space="preserve">
+    <value>Netto sparande denna månad:</value>
+    <comment>Label text for balance of this month</comment>
+  </data>
+  <data name="CancelText" xml:space="preserve">
+    <value>Avbryt</value>
+    <comment>Button text for cancel</comment>
+  </data>
+  <data name="CategoryNameText" xml:space="preserve">
+    <value>Katgorinamn</value>
+    <comment>Label text for new category name</comment>
+  </data>
+  <data name="CategoryText" xml:space="preserve">
+    <value>Kategori</value>
+    <comment>Label text for category</comment>
+  </data>
+  <data name="ChangeColourSettingText" xml:space="preserve">
+    <value>Ändra färg</value>
+    <comment>Button text for chaning colour</comment>
+  </data>
+  <data name="CompletedTitleText" xml:space="preserve">
+    <value>Färdig</value>
+    <comment>Dialog title text when task completed</comment>
+  </data>
+  <data name="ConfirmTitleText" xml:space="preserve">
+    <value>Bekräfta</value>
+    <comment>Dialog title text when requiring confirmation</comment>
+  </data>
+  <data name="CurrencySettingText" xml:space="preserve">
+    <value>Valuta:</value>
+    <comment>Currency setting text</comment>
+  </data>
+  <data name="CurrencyText" xml:space="preserve">
+    <value>kr</value>
+    <comment>Label text for currency</comment>
+  </data>
+  <data name="DatabaseCopyFailedText" xml:space="preserve">
+    <value>Databaskopieringen misslyckades.</value>
+    <comment>Dialog text when database export failed</comment>
+  </data>
+  <data name="DatabaseExportConfirmText" xml:space="preserve">
+    <value>Kopierar databasen till extern lagring. Om det redan finns en databas i den externa lagringen kommer den att skrivas över. Är det ok?</value>
+    <comment>Dialog text confirming database export</comment>
+  </data>
+  <data name="DatabaseExportSuccessText" xml:space="preserve">
+    <value>Databasen kopierades till filen nedan:</value>
+    <comment>Dialog text when database export succeed</comment>
+  </data>
+  <data name="DatabaseImportSuccessText" xml:space="preserve">
+    <value>Inläsning från extern databas slutförd.</value>
+    <comment>Dialog text when database import failed</comment>
+  </data>
+  <data name="DatabaseResetButtonText" xml:space="preserve">
+    <value>Återställ databas</value>
+    <comment>Button text for database reset</comment>
+  </data>
+  <data name="DatabaseResetCompleteText" xml:space="preserve">
+    <value>Databasen är återställd.</value>
+    <comment>Dialog text for database reset complete</comment>
+  </data>
+  <data name="DatabaseResetFailedText" xml:space="preserve">
+    <value>Återställningen misslyckades.</value>
+    <comment>Dialog text for database reset failed</comment>
+  </data>
+  <data name="DatabaseResetWarningText" xml:space="preserve">
+    <value>Är du säker på att du vill radera all finansiell data som är lagrad i denna app?</value>
+    <comment>Dialog text for database reset warning</comment>
+  </data>
+  <data name="DateText" xml:space="preserve">
+    <value>Datum</value>
+    <comment>Label text for date</comment>
+  </data>
+  <data name="DialogExternalDatabaseAccessErrorText" xml:space="preserve">
+    <value>Kunde inte ansluta till extern databas.</value>
+    <comment>Dialog alert text when not able to access external database</comment>
+  </data>
+  <data name="DialogReadBackupWarningText" xml:space="preserve">
+    <value>All data som ligger sparad lokalt i appen kommer att skrivas över. Är det ok?</value>
+    <comment>Warning text displayed when reading external database</comment>
+  </data>
+  <data name="DialogRemoveText" xml:space="preserve">
+    <value>Är du säker på att du vill radera?</value>
+    <comment>Dialog text that is displayed when remove button is hit</comment>
+  </data>
+  <data name="EditExpenseText" xml:space="preserve">
+    <value>Redigera utgift</value>
+    <comment>Edit expense window title</comment>
+  </data>
+  <data name="EditIncomeText" xml:space="preserve">
+    <value>Redigera inkomst</value>
+    <comment>Edit income window title</comment>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>Redigera</value>
+    <comment>Button text for editing item</comment>
+  </data>
+  <data name="EndDateSettingText" xml:space="preserve">
+    <value>Ändra sista dagen i varje månad</value>
+    <comment>Button text for last day of month</comment>
+  </data>
+  <data name="EndPeriodText" xml:space="preserve">
+    <value>Slut period</value>
+    <comment>End period text</comment>
+  </data>
+  <data name="ErrorAmountText" xml:space="preserve">
+    <value>Beloppet som angavs är ingen valid siffra.</value>
+    <comment>Display alert text when entered amount is not decimal</comment>
+  </data>
+  <data name="ExcelCurrencyColumnText" xml:space="preserve">
+    <value>Valuta</value>
+    <comment>Excel currency column item text</comment>
+  </data>
+  <data name="ExcelFilePathLabelText" xml:space="preserve">
+    <value>Sökväg till Excel filen:</value>
+    <comment>Label text for excel file path</comment>
+  </data>
+  <data name="ExcelPrintErrorMessage" xml:space="preserve">
+    <value>Excel filen kunde inte skapas.</value>
+    <comment>Dialog message printed when excel print error</comment>
+  </data>
+  <data name="ExcelPrintErrorTitle" xml:space="preserve">
+    <value>Excel fel</value>
+    <comment>Dialog title printed when excel print error</comment>
+  </data>
+  <data name="ExcelReportCompleteText" xml:space="preserve">
+    <value>Excel rapporten genererades med följande sökväg:</value>
+    <comment>Excel Report generate complete message</comment>
+  </data>
+  <data name="ExcelReportCompleteTitle" xml:space="preserve">
+    <value>Excel Rapport Genererad</value>
+    <comment>Excel Report generate complete title</comment>
+  </data>
+  <data name="ExcelReportText" xml:space="preserve">
+    <value>Generera Excel rapport</value>
+    <comment>Button text for excel report</comment>
+  </data>
+  <data name="ExcelTotalizationString" xml:space="preserve">
+    <value>Summering</value>
+    <comment>Excel sheet title of totalization sheet</comment>
+  </data>
+  <data name="ExpenseByCategoryText" xml:space="preserve">
+    <value>Utgift efter kategori</value>
+    <comment>Excel column expense by category string</comment>
+  </data>
+  <data name="ExpenseLabelText" xml:space="preserve">
+    <value>Utgift:</value>
+    <comment>Label text for expense</comment>
+  </data>
+  <data name="ExpenseText" xml:space="preserve">
+    <value>Utgift</value>
+    <comment>Expense text</comment>
+  </data>
+  <data name="ExpenseThisMonthText" xml:space="preserve">
+    <value>Utgifter denna månad:</value>
+    <comment>Label text for expense of this month</comment>
+  </data>
+  <data name="ExtDbPathDefaultButtonText" xml:space="preserve">
+    <value>Återställ sökvägen till externa databasen</value>
+    <comment>Button text for resetting external database path</comment>
+  </data>
+  <data name="ExtDbPathDefaultWarningText" xml:space="preserve">
+    <value>Sökvägen till external databasen är ändrad. Den ändrade informationen kommer at gå förlorad. Är det ok?</value>
+    <comment>Dialog warning text for external database path reset</comment>
+  </data>
+  <data name="ExtDbPathText" xml:space="preserve">
+    <value>Sökväg till extern databas:</value>
+    <comment>Database path text</comment>
+  </data>
+  <data name="FailedTitleText" xml:space="preserve">
+    <value>Misslyckades</value>
+    <comment>Dialog title text when task failed</comment>
+  </data>
+  <data name="FileAccessTitleText" xml:space="preserve">
+    <value>Filåtkomst nekad</value>
+    <comment>File access error text</comment>
+  </data>
+  <data name="HouseholdAccountText" xml:space="preserve">
+    <value>Bokföring</value>
+    <comment>Household account text</comment>
+  </data>
+  <data name="IncomeByCategoryText" xml:space="preserve">
+    <value>Inkomst efter kategori</value>
+    <comment>Excel column income by category string</comment>
+  </data>
+  <data name="IncomeLabelText" xml:space="preserve">
+    <value>Inkomst:</value>
+    <comment>Label text for income</comment>
+  </data>
+  <data name="IncomeText" xml:space="preserve">
+    <value>Inkomst</value>
+    <comment>Income text</comment>
+  </data>
+  <data name="IncomeThisMonthText" xml:space="preserve">
+    <value>Inkomster denna månad:</value>
+    <comment>Label text for income of this month</comment>
+  </data>
+  <data name="InputErrorText" xml:space="preserve">
+    <value>Inmatningsfel</value>
+    <comment>Title of alert dialog when input error</comment>
+  </data>
+  <data name="MainPageTitleText" xml:space="preserve">
+    <value>Panda Hushållsekonomi</value>
+    <comment>Title text for main page</comment>
+  </data>
+  <data name="MemoText" xml:space="preserve">
+    <value>Anteckningar</value>
+    <comment>Label text for memo</comment>
+  </data>
+  <data name="MonthText" xml:space="preserve">
+    <value>Månad</value>
+    <comment>Month text</comment>
+  </data>
+  <data name="NewCategoryText" xml:space="preserve">
+    <value>Ny kategori</value>
+    <comment>Title text for creating new category</comment>
+  </data>
+  <data name="NewText" xml:space="preserve">
+    <value>Ny</value>
+    <comment>Button text for add new item</comment>
+  </data>
+  <data name="NextText" xml:space="preserve">
+    <value>Nästa</value>
+    <comment>Next text</comment>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>Nej</value>
+    <comment>No text</comment>
+  </data>
+  <data name="OkText" xml:space="preserve">
+    <value>Ok</value>
+    <comment>Ok text</comment>
+  </data>
+  <data name="PaySettingText" xml:space="preserve">
+    <value>Betala och bli av med reklam</value>
+    <comment>Button text for paying</comment>
+  </data>
+  <data name="PhotoText" xml:space="preserve">
+    <value>Lägg till foto</value>
+    <comment>Label text for photo</comment>
+  </data>
+  <data name="PreviousText" xml:space="preserve">
+    <value>Föregående</value>
+    <comment>Previous text</comment>
+  </data>
+  <data name="ReadBackupSettingText" xml:space="preserve">
+    <value>Läs in data från extern databas</value>
+    <comment>Button text for SD card read backup</comment>
+  </data>
+  <data name="RemoveText" xml:space="preserve">
+    <value>Radera</value>
+    <comment>Button text for removing item</comment>
+  </data>
+  <data name="ReportText" xml:space="preserve">
+    <value>Generera rapport</value>
+    <comment>Generate report text</comment>
+  </data>
+  <data name="SaveText" xml:space="preserve">
+    <value>Spara</value>
+    <comment>Save button text</comment>
+  </data>
+  <data name="SettingsText" xml:space="preserve">
+    <value>Inställningar</value>
+    <comment>settings title</comment>
+  </data>
+  <data name="ShareFbSettingText" xml:space="preserve">
+    <value>Dela appen och bli av med reklam</value>
+    <comment>Button text for sharing app on Facebook</comment>
+  </data>
+  <data name="SortText" xml:space="preserve">
+    <value>Sortera</value>
+    <comment>sort text</comment>
+  </data>
+  <data name="StartPeriodText" xml:space="preserve">
+    <value>Start period</value>
+    <comment>Start period text</comment>
+  </data>
+  <data name="TotalText" xml:space="preserve">
+    <value>Totalt</value>
+    <comment>Total text</comment>
+  </data>
+  <data name="ViewDataText" xml:space="preserve">
+    <value>Visa data</value>
+    <comment>Button text for viewing data</comment>
+  </data>
+  <data name="YearText" xml:space="preserve">
+    <value>År</value>
+    <comment>Year text</comment>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>Ja</value>
+    <comment>Yes text</comment>
+  </data>
+</root>

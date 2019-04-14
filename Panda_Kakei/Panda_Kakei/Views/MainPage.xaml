@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Panda_Kakei"
+             x:Class="Panda_Kakei.Views.MainPage"
+             Title="{local:Translate MainPageTitleText}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuItemSettings" Clicked="menuItemSettings_OnClicked" Text="{local:Translate SettingsText}"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="15, 25, 15, 15">
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>-->
+
+        <Label Text="{local:Translate IncomeThisMonthText}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" />
+        <Entry x:Name="entryIncome" IsEnabled="False" Grid.Column="2" Grid.Row="0" />
+
+        <Label Text="{local:Translate ExpenseThisMonthText}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" />
+        <Entry x:Name="entryExpense" IsEnabled="False" Grid.Column="2" Grid.Row="1" />
+
+        <Label Text="{local:Translate BalanceThisMonthText}" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" />
+        <Entry x:Name="entryBalance" IsEnabled="False" Grid.Column="2" Grid.Row="2" />
+
+        <Button x:Name="btnAddExpense" Text="{local:Translate AddExpenseText}" Grid.Column="0" Grid.Row="3"
+                Grid.ColumnSpan="3" Clicked="btnAddExpense_OnClicked" />
+
+        <Button x:Name="btnAddIncome" Text="{local:Translate AddIncomeText}" Grid.Column="0" Grid.Row="4"
+                Grid.ColumnSpan="3" Clicked="btnAddIncome_OnClicked" />
+
+        <Button x:Name="btnViewData" Text="{local:Translate ViewDataText}" Grid.Column="0" Grid.Row="5"
+                Grid.ColumnSpan="3" Clicked="btnViewData_OnClicked" />
+
+        <Button x:Name="btnExcelReport" Text="{local:Translate ExcelReportText}" Grid.Column="0" Grid.Row="6"
+                Grid.ColumnSpan="3" Clicked="btnExcelReport_OnClicked" />
+
+    </Grid>
+
+</ContentPage>

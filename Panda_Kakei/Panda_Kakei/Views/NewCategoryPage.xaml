@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Panda_Kakei"
+             x:Class="Panda_Kakei.Views.NewCategoryPage"
+             Title="{local:Translate NewCategoryText}"
+             >
+    <ContentPage.Content>
+        <StackLayout Padding="15, 25, 15, 15" Spacing="15">
+            <!--<Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />-->
+
+            <Entry x:Name="entryCategoryName" Placeholder="{local:Translate CategoryNameText}" />
+            
+            <StackLayout Orientation="Horizontal" Spacing="15">
+                <Button x:Name="btnAdd" Text="{local:Translate AddText}" Clicked="btnAdd_OnClicked" />
+                <Button x:Name="btnCancel" Text="{local:Translate CancelText}" Clicked="btnCancel_OnClicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
