@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Panda_Kakei"
+             x:Class="Panda_Kakei.Views.ViewRegularDataItemPage">
+    <ContentPage.Content>
+        <Grid Padding="15, 25, 15, 15" RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="0.5*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="lblSubTitle" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.ColumnSpan="5" />
+
+            <Label Text="{local:Translate CategoryText}" Grid.Row="1" Grid.Column="1" />
+            <Label Text="{local:Translate AmountText}" Grid.Row="1" Grid.Column="2" />
+            <Label Text="{local:Translate MemoText}" Grid.Row="1" Grid.Column="3" />
+            <Label Text="{local:Translate DateText}" Grid.Row="1" Grid.Column="4" />
+            <ListView x:Name="listViewRegularData" ItemsSource="{Binding RegularDataItems}" 
+                      ItemSelected="listViewRegularData_ItemSelected" Grid.Row="2" Grid.ColumnSpan="5">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Text="{Binding TypeText}" Grid.Column="0" />
+                                <Label Text="{Binding CategoryText}" Grid.Column="1" />
+                                <Label Text="{Binding AmountText}" Grid.Column="2" />
+                                <Label Text="{Binding MemoText}" Grid.Column="3" />
+                                <Label Text="{Binding DayText}" Grid.Column="4" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid Grid.Row="3" Grid.ColumnSpan="5">
+                <Button x:Name="btnAdd" Text="{local:Translate AddText}" HorizontalOptions="Center" 
+                        VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Clicked="btnAdd_Clicked" />
+                <Button x:Name="btnEdit" Text="{local:Translate EditText}" HorizontalOptions="Center"
+                        VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Clicked="btnEdit_Clicked"
+                        IsEnabled="False" />
+                <Button x:Name="btnRemove" Text="{local:Translate RemoveText}" HorizontalOptions="Center"
+                        VerticalOptions="Center" Grid.Row="0" Grid.Column="2" Clicked="btnRemove_ClickedAsync"
+                        IsEnabled="False" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

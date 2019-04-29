@@ -110,6 +110,55 @@ namespace Panda_Kakei.Models
         }
     }
 
+    public class RegularDataItem
+    {
+        public RegularDataItem()
+        {
+
+        }
+
+        public RegularDataItem(RegularData regularData)
+        {
+            DbRegDataItem = regularData;
+            if(regularData.CategoryType == Constants.INCOME_STRING)
+            {
+                Type = CategoryType.INCOME_CATEGORY;
+                TypeText = Panda_Kakei.Resources.AppResource.IncomeText;
+            }
+            else if(regularData.CategoryType == Constants.EXPENSE_STRING)
+            {
+                Type = CategoryType.EXPENSE_CATEGORY;
+                TypeText = Panda_Kakei.Resources.AppResource.ExpenseText;
+            }
+
+            CategoryText = regularData.Category;
+            AmountText = regularData.Amount.ToString();
+            MemoText = regularData.Comment;
+            DateTime date = new DateTime(DateTime.Today.Year, DateTime.Today.Month, regularData.Day);          
+            DayText = date.Day.ToString("d"); ;
+        }
+
+        public RegularData DbRegDataItem { get; set; }               
+        public CategoryType Type { get; set; }
+        public string TypeText { get; set; }
+        public string CategoryText { get; set; }
+        public string AmountText { get; set; }
+        public string MemoText { get; set; }
+        public string DayText { get; set; }
+    }
+
+    public class RegularDataItemModel : INotifyPropertyChanged
+    {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public ObservableCollection<RegularDataItem> RegularDataItems { get; }
+
+        public RegularDataItemModel()
+        {
+            RegularDataItems = new ObservableCollection<RegularDataItem>();
+        }
+    }
+
     public class DatePickerViewModel : INotifyPropertyChanged
     {
         private ObservableCollection<object> _startdate;

@@ -32,6 +32,7 @@ namespace Panda_Kakei.Services
                 dbConnection.CreateTable<DataSettings>();
                 dbConnection.CreateTable<Data>();
                 dbConnection.CreateTable<AppSettings>();
+                dbConnection.CreateTable<RegularData>();
             }
             catch(Exception e)
             {
@@ -71,6 +72,18 @@ namespace Panda_Kakei.Services
             catch (Exception e)
             {
                 ErrorStatusMessage = string.Format("Failed to add {0}. Error: {1}", name, e.Message);
+            }
+        }
+
+        public void AddRegularDataItem(RegularData regularData)
+        {
+            try
+            {
+                dbConnection.Insert(regularData);
+            }
+            catch (Exception e)
+            {
+                ErrorStatusMessage = string.Format("Failed to add regular data item. Error: {0}", e.Message);
             }
         }
 
@@ -172,6 +185,22 @@ namespace Panda_Kakei.Services
             return new List<DataSettings>();
         }
 
+        public List<RegularData> GetAllRegularDataItems(string categoryType)
+        {
+            try
+            {
+                string query = string.Format("SELECT * FROM {0} WHERE {1} = \"{2}\"", Constants.REGULAR_DATA_ITEMS_STRING,
+                    Constants.CATEGORY_TYPE_STRING, categoryType);
+
+                return dbConnection.Query<RegularData>(query);
+            }
+            catch (Exception e)
+            {
+                ErrorStatusMessage = string.Format("Failed to receive regular data. Error: {0}", e.Message);
+            }
+            return new List<RegularData>();
+        }
+
         public string GetCurrencySettings()
         {
             try
@@ -227,7 +256,26 @@ namespace Panda_Kakei.Services
 
         public void ModifyDataItem(Data dataItem)
         {
-            dbConnection.Update(dataItem);
+            try
+            {
+                dbConnection.Update(dataItem);
+            }
+            catch (Exception e)
+            {
+                ErrorStatusMessage = string.Format("Failed to modify data item. Error: {0}", e.Message);
+            }
+        }
+
+        public void ModifyRegularDataItem(RegularData regularData)
+        {
+            try
+            {
+                dbConnection.Update(regularData);
+            }
+            catch (Exception e)
+            {
+                ErrorStatusMessage = string.Format("Failed to modify regular data item. Error: {0}", e.Message);
+            }
         }
 
         public void ModifyCurrencySettings(string newCurrencySymbol)
@@ -239,13 +287,30 @@ namespace Panda_Kakei.Services
 
         public void DeleteDataItem(Data dataItem)
         {
-            dbConnection.Delete(dataItem);
+            try
+            {
+                dbConnection.Delete(dataItem);
+            }
+            catch (Exception e)
+            {
+                ErrorStatusMessage = string.Format("Failed to delete data item. Error: {0}", e.Message);
+            }
+        }
+
+        public void DeleteRegularDataItem(RegularData regularData)
+        {
+            try
+            {
+                dbConnection.Delete(regularData);
+            }
+            catch (Exception e)
+            {
+                ErrorStatusMessage = string.Format("Failed to delete regular data item. Error: {0}", e.Message);
+            }
         }
 
         public void DeleteAllDataItems()
         {
-            //string query = string.Format("DELETE FROM {0}", Constants.DATA_ITEMS_STRING);
-            //dbConnection.Execute(query);
             dbConnection.DeleteAll<Data>();
         }
 

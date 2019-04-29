@@ -16,6 +16,9 @@ namespace Panda_Kakei
         public const string INCOME_CATEGORY_NAME_MESSAGE = "INCOME_CATEGORY_NAME";
         public const string EDIT_DATA_ITEM_MESSAGE = "EDIT_DATA_ITEM";
         public const string REFRESH_MAIN_PAGE_BALANCE_MESSAGE = "REFRESH_MAIN_PAGE_BALANCE";
+        public const string ADD_EDIT_REGULAR_DATA_ITEM_MESSAGE = "ADD_EDIT_REGULAR_DATA_ITEM";
+        public const string ADDED_REGULAR_DATA_ITEM_MESSAGE = "ADDED_REGULAR_DATA_ITEM";
+        public const string EDITED_REGULAR_DATA_ITEM_MESSAGE = "EDITED_REGULAR_DATA_ITEM";
 
         public const string EXPENSE_STRING = "expense";
         public const string INCOME_STRING = "income";
@@ -24,6 +27,7 @@ namespace Panda_Kakei
         public const string CATEGORY_STRING = "category";
         public const string NAME_STRING = "name";
         public const string DATA_ITEMS_STRING = "data_items";
+        public const string REGULAR_DATA_ITEMS_STRING = "regular_data_items";
         public const string DAY_STRING = "day";
         public const string MONTH_STRING = "month";
         public const string YEAR_STRING = "year";

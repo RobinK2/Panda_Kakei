@@ -19,7 +19,7 @@ namespace Panda_Kakei.Resources {
     // または Visual Studio のようなツールを使用して自動生成されました。
     // メンバーを追加または削除するには、.ResX ファイルを編集して、/str オプションと共に
     // ResGen を実行し直すか、または VS プロジェクトをビルドし直します。
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppResource {
@@ -47,7 +47,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+        ///   すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
         ///   現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -61,7 +61,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Add new expense に類似しているローカライズされた文字列を検索します。
+        ///   Add New Expense に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string AddExpenseText {
             get {
@@ -70,11 +70,20 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Add new income に類似しているローカライズされた文字列を検索します。
+        ///   Add New Income に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string AddIncomeText {
             get {
                 return ResourceManager.GetString("AddIncomeText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Add Regular Income/Expense に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string AddRegularIncomeExpenseText {
+            get {
+                return ResourceManager.GetString("AddRegularIncomeExpenseText", resourceCulture);
             }
         }
         
@@ -115,7 +124,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Copy database to external folder に類似しているローカライズされた文字列を検索します。
+        ///   Copy Database to External Folder に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string BackupSettingText {
             get {
@@ -124,7 +133,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Net savings: に類似しているローカライズされた文字列を検索します。
+        ///   Net Savings: に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string BalanceLabelText {
             get {
@@ -133,7 +142,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Net savings に類似しているローカライズされた文字列を検索します。
+        ///   Net Savings に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string BalanceText {
             get {
@@ -160,7 +169,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Category name に類似しているローカライズされた文字列を検索します。
+        ///   Category Name に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string CategoryNameText {
             get {
@@ -178,7 +187,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Change colour  に類似しているローカライズされた文字列を検索します。
+        ///   Change Colour  に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ChangeColourSettingText {
             get {
@@ -259,7 +268,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Reset database に類似しているローカライズされた文字列を検索します。
+        ///   Reset Database に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DatabaseResetButtonText {
             get {
@@ -304,6 +313,15 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
+        ///   Day に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DayPickerTitleText {
+            get {
+                return ResourceManager.GetString("DayPickerTitleText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Could not access to external database に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DialogExternalDatabaseAccessErrorText {
@@ -331,7 +349,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Edit expense に類似しているローカライズされた文字列を検索します。
+        ///   Edit Expense に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string EditExpenseText {
             get {
@@ -340,11 +358,29 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Edit income に類似しているローカライズされた文字列を検索します。
+        ///   Edit Income に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string EditIncomeText {
             get {
                 return ResourceManager.GetString("EditIncomeText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Edit Regular Expense に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string EditRegularExpenseText {
+            get {
+                return ResourceManager.GetString("EditRegularExpenseText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Edit Regular Income に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string EditRegularIncomeText {
+            get {
+                return ResourceManager.GetString("EditRegularIncomeText", resourceCulture);
             }
         }
         
@@ -358,7 +394,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Change last day of every month に類似しているローカライズされた文字列を検索します。
+        ///   Change Last Day of Every Month に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string EndDateSettingText {
             get {
@@ -367,7 +403,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   End period に類似しているローカライズされた文字列を検索します。
+        ///   End Period に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string EndPeriodText {
             get {
@@ -394,7 +430,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Excel file path: に類似しているローカライズされた文字列を検索します。
+        ///   Excel File Path: に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExcelFilePathLabelText {
             get {
@@ -439,7 +475,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Generate Excel report に類似しているローカライズされた文字列を検索します。
+        ///   Generate Excel Report に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExcelReportText {
             get {
@@ -493,7 +529,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Reset external database path to default に類似しているローカライズされた文字列を検索します。
+        ///   Reset External Database Path to Default に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExtDbPathDefaultButtonText {
             get {
@@ -511,7 +547,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Path to external database: に類似しているローカライズされた文字列を検索します。
+        ///   Path to External Database: に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExtDbPathText {
             get {
@@ -538,7 +574,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Household account book に類似しているローカライズされた文字列を検索します。
+        ///   Household Account Book に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HouseholdAccountText {
             get {
@@ -552,6 +588,15 @@ namespace Panda_Kakei.Resources {
         internal static string IncomeByCategoryText {
             get {
                 return ResourceManager.GetString("IncomeByCategoryText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Income/Expense に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string IncomeExpenseText {
+            get {
+                return ResourceManager.GetString("IncomeExpenseText", resourceCulture);
             }
         }
         
@@ -619,7 +664,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   New category に類似しているローカライズされた文字列を検索します。
+        ///   New Category に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NewCategoryText {
             get {
@@ -664,7 +709,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Pay and remove ads に類似しているローカライズされた文字列を検索します。
+        ///   Pay and Remove Ads に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PaySettingText {
             get {
@@ -673,7 +718,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Add a photo に類似しているローカライズされた文字列を検索します。
+        ///   Add a Photo に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PhotoText {
             get {
@@ -691,11 +736,65 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Load data from external database に類似しているローカライズされた文字列を検索します。
+        ///   Load Data from External Database に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ReadBackupSettingText {
             get {
                 return ResourceManager.GetString("ReadBackupSettingText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Regular Expense に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string RegularExpenseSettingsText {
+            get {
+                return ResourceManager.GetString("RegularExpenseSettingsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Expenses Occuring Every Month に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string RegularExpenseSubtitleText {
+            get {
+                return ResourceManager.GetString("RegularExpenseSubtitleText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Regular Income/Expense に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string RegularIncomeExpenseSettingsText {
+            get {
+                return ResourceManager.GetString("RegularIncomeExpenseSettingsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Incomes/Expenses Occuring Every Month に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string RegularIncomeExpenseSubtitleText {
+            get {
+                return ResourceManager.GetString("RegularIncomeExpenseSubtitleText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Regular Income  に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string RegularIncomeSettingsText {
+            get {
+                return ResourceManager.GetString("RegularIncomeSettingsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Incomes Occuring Every Month に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string RegularIncomeSubtitleText {
+            get {
+                return ResourceManager.GetString("RegularIncomeSubtitleText", resourceCulture);
             }
         }
         
@@ -709,7 +808,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Generate report に類似しているローカライズされた文字列を検索します。
+        ///   Generate Report に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ReportText {
             get {
@@ -736,7 +835,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Share the app and remove ads に類似しているローカライズされた文字列を検索します。
+        ///   Share The App and Remove Ads に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ShareFbSettingText {
             get {
@@ -754,7 +853,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Start period に類似しているローカライズされた文字列を検索します。
+        ///   Start Period に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string StartPeriodText {
             get {
@@ -772,7 +871,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   View data に類似しているローカライズされた文字列を検索します。
+        ///   View Data に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ViewDataText {
             get {

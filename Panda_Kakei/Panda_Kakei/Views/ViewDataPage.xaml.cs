@@ -125,9 +125,6 @@ namespace Panda_Kakei.Views
             lblIncome.Text = Panda_Kakei.Resources.AppResource.IncomeLabelText + " " + totalIncome.ToString();
             lblExpense.Text = Panda_Kakei.Resources.AppResource.ExpenseLabelText + " " + totalExpense.ToString();
             lblBalance.Text = Panda_Kakei.Resources.AppResource.BalanceLabelText + " " + balance.ToString();
-            //lblIncome.Text = totalIncome.ToString();
-            //lblExpense.Text = totalExpense.ToString();
-            //lblBalance.Text = balance.ToString();
         }
 
         private void btnSetDate_Clicked(object sender, EventArgs e)

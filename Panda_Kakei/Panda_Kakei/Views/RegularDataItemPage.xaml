@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Panda_Kakei.Views.DataItemPage"
+             x:Class="Panda_Kakei.Views.RegularDataItemPage"
              xmlns:local="clr-namespace:Panda_Kakei"
              >
-
     <ContentPage.Content>
         <StackLayout Padding="15, 25, 15, 15" Spacing="15">
-            <DatePicker x:Name="datePicker" Format="D" />
+            <Picker x:Name="pickerCategoryType" SelectedIndexChanged="pickerCategoryType_SelectedIndexChanged" 
+                    Title="{local:Translate IncomeExpenseText}" />
+            <Picker x:Name="pickerDay" SelectedIndexChanged="pickerDay_SelectedIndexChanged"
+                    Title="{local:Translate DayPickerTitleText}" />
             <Picker x:Name="pickerCategory" ItemsSource="{Binding Categories}" ItemDisplayBinding="{Binding Name}" 
                     SelectedIndexChanged="pickerCategory_SelectedIndexChanged" Title="{local:Translate CategoryText}" />
 

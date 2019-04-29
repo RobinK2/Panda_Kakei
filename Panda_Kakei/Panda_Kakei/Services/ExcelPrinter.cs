@@ -79,7 +79,7 @@ namespace Panda_Kakei.Services
                 workbook.Close();
 
                 //Save the stream as a file in the device and invoke it for viewing
-                Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView(filename, "application/msexcel", stream);
+                await Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView(filename, "application/msexcel", stream);
             }
         }
 

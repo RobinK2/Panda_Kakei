@@ -118,12 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddExpenseText" xml:space="preserve">
-    <value>Add new expense</value>
+    <value>Add New Expense</value>
     <comment>Button text for adding new expense</comment>
   </data>
   <data name="AddIncomeText" xml:space="preserve">
-    <value>Add new income</value>
+    <value>Add New Income</value>
     <comment>Button text for adding new income</comment>
+  </data>
+  <data name="AddRegularIncomeExpenseText" xml:space="preserve">
+    <value>Add Regular Income/Expense</value>
+    <comment>Title text for adding regular income or expense</comment>
   </data>
   <data name="AddText" xml:space="preserve">
     <value>Add</value>
@@ -142,15 +146,15 @@
     <comment>Label text for amount of money</comment>
   </data>
   <data name="BackupSettingText" xml:space="preserve">
-    <value>Copy database to external folder</value>
+    <value>Copy Database to External Folder</value>
     <comment>Button text for SD card backup</comment>
   </data>
   <data name="BalanceLabelText" xml:space="preserve">
-    <value>Net savings:</value>
+    <value>Net Savings:</value>
     <comment>Label text for balance</comment>
   </data>
   <data name="BalanceText" xml:space="preserve">
-    <value>Net savings</value>
+    <value>Net Savings</value>
     <comment>Balance text</comment>
   </data>
   <data name="BalanceThisMonthText" xml:space="preserve">
@@ -162,7 +166,7 @@
     <comment>Button text for cancel</comment>
   </data>
   <data name="CategoryNameText" xml:space="preserve">
-    <value>Category name</value>
+    <value>Category Name</value>
     <comment>Label text for new category name</comment>
   </data>
   <data name="CategoryText" xml:space="preserve">
@@ -170,7 +174,7 @@
     <comment>Label text for category</comment>
   </data>
   <data name="ChangeColourSettingText" xml:space="preserve">
-    <value>Change colour </value>
+    <value>Change Colour </value>
     <comment>Button text for chaning colour</comment>
   </data>
   <data name="CompletedTitleText" xml:space="preserve">
@@ -206,7 +210,7 @@
     <comment>Dialog text when database import failed</comment>
   </data>
   <data name="DatabaseResetButtonText" xml:space="preserve">
-    <value>Reset database</value>
+    <value>Reset Database</value>
     <comment>Button text for database reset</comment>
   </data>
   <data name="DatabaseResetCompleteText" xml:space="preserve">
@@ -225,6 +229,10 @@
     <value>Date</value>
     <comment>Label text for date</comment>
   </data>
+  <data name="DayPickerTitleText" xml:space="preserve">
+    <value>Day</value>
+    <comment>Title text for day picker</comment>
+  </data>
   <data name="DialogExternalDatabaseAccessErrorText" xml:space="preserve">
     <value>Could not access to external database</value>
     <comment>Dialog alert text when not able to access external database</comment>
@@ -238,23 +246,31 @@
     <comment>Dialog text that is displayed when remove button is hit</comment>
   </data>
   <data name="EditExpenseText" xml:space="preserve">
-    <value>Edit expense</value>
+    <value>Edit Expense</value>
     <comment>Edit expense window title</comment>
   </data>
   <data name="EditIncomeText" xml:space="preserve">
-    <value>Edit income</value>
+    <value>Edit Income</value>
     <comment>Edit income window title</comment>
+  </data>
+  <data name="EditRegularExpenseText" xml:space="preserve">
+    <value>Edit Regular Expense</value>
+    <comment>Title text for editing regular expense</comment>
+  </data>
+  <data name="EditRegularIncomeText" xml:space="preserve">
+    <value>Edit Regular Income</value>
+    <comment>Title text for editing regular income</comment>
   </data>
   <data name="EditText" xml:space="preserve">
     <value>Edit</value>
     <comment>Button text for editing item</comment>
   </data>
   <data name="EndDateSettingText" xml:space="preserve">
-    <value>Change last day of every month</value>
+    <value>Change Last Day of Every Month</value>
     <comment>Button text for last day of month</comment>
   </data>
   <data name="EndPeriodText" xml:space="preserve">
-    <value>End period</value>
+    <value>End Period</value>
     <comment>End period text</comment>
   </data>
   <data name="ErrorAmountText" xml:space="preserve">
@@ -266,7 +282,7 @@
     <comment>Excel currency column item text</comment>
   </data>
   <data name="ExcelFilePathLabelText" xml:space="preserve">
-    <value>Excel file path:</value>
+    <value>Excel File Path:</value>
     <comment>Label text for excel file path</comment>
   </data>
   <data name="ExcelPrintErrorMessage" xml:space="preserve">
@@ -286,7 +302,7 @@
     <comment>Excel Report generate complete title</comment>
   </data>
   <data name="ExcelReportText" xml:space="preserve">
-    <value>Generate Excel report</value>
+    <value>Generate Excel Report</value>
     <comment>Button text for excel report</comment>
   </data>
   <data name="ExcelTotalizationString" xml:space="preserve">
@@ -310,7 +326,7 @@
     <comment>Label text for expense of this month</comment>
   </data>
   <data name="ExtDbPathDefaultButtonText" xml:space="preserve">
-    <value>Reset external database path to default</value>
+    <value>Reset External Database Path to Default</value>
     <comment>Button text for resetting external database path</comment>
   </data>
   <data name="ExtDbPathDefaultWarningText" xml:space="preserve">
@@ -318,7 +334,7 @@
     <comment>Dialog warning text for external database path reset</comment>
   </data>
   <data name="ExtDbPathText" xml:space="preserve">
-    <value>Path to external database:</value>
+    <value>Path to External Database:</value>
     <comment>Database path text</comment>
   </data>
   <data name="FailedTitleText" xml:space="preserve">
@@ -330,12 +346,16 @@
     <comment>File access error text</comment>
   </data>
   <data name="HouseholdAccountText" xml:space="preserve">
-    <value>Household account book</value>
+    <value>Household Account Book</value>
     <comment>Household account text</comment>
   </data>
   <data name="IncomeByCategoryText" xml:space="preserve">
     <value>Income by category</value>
     <comment>Excel column income by category string</comment>
+  </data>
+  <data name="IncomeExpenseText" xml:space="preserve">
+    <value>Income/Expense</value>
+    <comment>Title text for category type picker</comment>
   </data>
   <data name="IncomeLabelText" xml:space="preserve">
     <value>Income:</value>
@@ -366,7 +386,7 @@
     <comment>Month text</comment>
   </data>
   <data name="NewCategoryText" xml:space="preserve">
-    <value>New category</value>
+    <value>New Category</value>
     <comment>Title text for creating new category</comment>
   </data>
   <data name="NewText" xml:space="preserve">
@@ -386,11 +406,11 @@
     <comment>Ok text</comment>
   </data>
   <data name="PaySettingText" xml:space="preserve">
-    <value>Pay and remove ads</value>
+    <value>Pay and Remove Ads</value>
     <comment>Button text for paying</comment>
   </data>
   <data name="PhotoText" xml:space="preserve">
-    <value>Add a photo</value>
+    <value>Add a Photo</value>
     <comment>Label text for photo</comment>
   </data>
   <data name="PreviousText" xml:space="preserve">
@@ -398,15 +418,39 @@
     <comment>Previous text</comment>
   </data>
   <data name="ReadBackupSettingText" xml:space="preserve">
-    <value>Load data from external database</value>
+    <value>Load Data from External Database</value>
     <comment>Button text for SD card read backup</comment>
+  </data>
+  <data name="RegularExpenseSettingsText" xml:space="preserve">
+    <value>Regular Expense</value>
+    <comment>Regular expense settings text</comment>
+  </data>
+  <data name="RegularExpenseSubtitleText" xml:space="preserve">
+    <value>Expenses Occuring Every Month</value>
+    <comment>Regular expense description</comment>
+  </data>
+  <data name="RegularIncomeExpenseSettingsText" xml:space="preserve">
+    <value>Regular Income/Expense</value>
+    <comment>Regular income expense settings text</comment>
+  </data>
+  <data name="RegularIncomeExpenseSubtitleText" xml:space="preserve">
+    <value>Incomes/Expenses Occuring Every Month</value>
+    <comment>Regular income expense description</comment>
+  </data>
+  <data name="RegularIncomeSettingsText" xml:space="preserve">
+    <value>Regular Income </value>
+    <comment>Regular income settings text</comment>
+  </data>
+  <data name="RegularIncomeSubtitleText" xml:space="preserve">
+    <value>Incomes Occuring Every Month</value>
+    <comment>Regular income description</comment>
   </data>
   <data name="RemoveText" xml:space="preserve">
     <value>Delete</value>
     <comment>Button text for removing item</comment>
   </data>
   <data name="ReportText" xml:space="preserve">
-    <value>Generate report</value>
+    <value>Generate Report</value>
     <comment>Generate report text</comment>
   </data>
   <data name="SaveText" xml:space="preserve">
@@ -418,7 +462,7 @@
     <comment>settings title</comment>
   </data>
   <data name="ShareFbSettingText" xml:space="preserve">
-    <value>Share the app and remove ads</value>
+    <value>Share The App and Remove Ads</value>
     <comment>Button text for sharing app on Facebook</comment>
   </data>
   <data name="SortText" xml:space="preserve">
@@ -426,7 +470,7 @@
     <comment>sort text</comment>
   </data>
   <data name="StartPeriodText" xml:space="preserve">
-    <value>Start period</value>
+    <value>Start Period</value>
     <comment>Start period text</comment>
   </data>
   <data name="TotalText" xml:space="preserve">
@@ -434,7 +478,7 @@
     <comment>Total text</comment>
   </data>
   <data name="ViewDataText" xml:space="preserve">
-    <value>View data</value>
+    <value>View Data</value>
     <comment>Button text for viewing data</comment>
   </data>
   <data name="YearText" xml:space="preserve">

@@ -1,11 +1,6 @@
 ﻿using Panda_Kakei.Models;
-using Panda_Kakei.Services;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -62,6 +57,7 @@ namespace Panda_Kakei.Views
                 if (category.Name == dataItem.Category)
                 {
                     pickerCategory.SelectedItem = category;
+                    break;
                 }
             }
         }

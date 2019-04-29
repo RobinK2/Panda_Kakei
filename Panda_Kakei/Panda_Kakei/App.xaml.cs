@@ -10,13 +10,11 @@ namespace Panda_Kakei
 {
 	public partial class App : Application
 	{
-        private const string SYNCFUSION_LICENSE_KEY = "NjYwNzFAMzEzNjJlMzQyZTMwbTNNU2tlYndveG1Ed25DV1VLbEJYUi8ybEo3ODFWbzJTa2ZUT05VY05zND0=";
-        private const string SYNCFUSION_LICENSE_KEY2 =  "NjYxMTFAMzEzNjJlMzMyZTMwYzArWFRGVERja012R0w3c0lBQ2xpOVNqRVRucFJPQjFMaDUzczY0cmFtST0=";
+        private const string SYNCFUSION_LICENSE_KEY = "OTM0NjNAMzEzNzJlMzEyZTMwa0s2VlVmYjB4ZGQ4Vm45MzFnemhXeVVMeVpWbmFwaXJZR3hNZUc5ZnIraz0=";
         public App (string dbPath)
 		{
             //Register Syncfusion license
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(SYNCFUSION_LICENSE_KEY);
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(SYNCFUSION_LICENSE_KEY2);
 
             InitializeComponent();
 

@@ -4,17 +4,10 @@
              xmlns:local="clr-namespace:Panda_Kakei"
              x:Class="Panda_Kakei.Views.SettingsPage"
              Title="{local:Translate SettingsText}">
-    
+
     <ContentPage.Content>
-        <Grid Padding="15, 25, 15, 15" RowSpacing="15" >
-            <!--<Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>-->
-            
+        <StackLayout Padding="15, 25, 15, 15" Spacing="15" >
+
             <!--<Button x:Name="btnEndDate" Text="{local:Translate EndDateSettingText}"
                     VerticalOptions="Center" Clicked="btnEndDate_OnClicked" />-->
             <!--<Button x:Name="btnChangeColour" Text="{local:Translate ChangeColourSettingText}" 
@@ -23,23 +16,28 @@
                     VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" />
             <Entry x:Name="entryExtDbPath" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="1"
                    IsEnabled="False" />-->
-            <Label Text="{local:Translate CurrencySettingText}" VerticalOptions="Center" HorizontalOptions="Center"
-                   Grid.Row="1" Grid.Column="0" />
-            <Entry x:Name="entryCurrency" Text="{x:Static local:SharedObject.currencySymbol}" VerticalOptions="Center"
-                   HorizontalOptions="Center" Grid.Row="1" Grid.Column="1" TextChanged="entryCurrency_TextChanged" />
+            <StackLayout Orientation="Horizontal" FlowDirection="RightToLeft" Spacing="15">
+                <Entry x:Name="entryCurrency" Text="{x:Static local:SharedObject.currencySymbol}" VerticalOptions="Center"
+                       HorizontalOptions="Center" TextChanged="entryCurrency_TextChanged" />
+                <Label Text="{local:Translate CurrencySettingText}" VerticalOptions="Center" HorizontalOptions="Center" />
+            </StackLayout>
+            
+
             <!--<Button x:Name="btnRestoreExtDbPath" Text="{local:Translate ExtDbPathDefaultButtonText}" VerticalOptions="Center"
                     Clicked="btnRestoreExtDbPath_ClickedAsync" Grid.Row="3" Grid.ColumnSpan="2" />-->
+            <Button x:Name="btnRegularIncomeExpense" Text="{local:Translate RegularIncomeExpenseSettingsText}"
+                    VerticalOptions="Center" Clicked="btnRegularIncomeExpense_OnClicked" />
             <Button x:Name="btnBackup" Text="{local:Translate BackupSettingText}" 
-                    VerticalOptions="Center" Clicked="btnBackup_OnClickedAsync" Grid.Row="2" Grid.ColumnSpan="2" />
+                    VerticalOptions="Center" Clicked="btnBackup_OnClickedAsync" />
             <Button x:Name="btnReadBackup" Text="{local:Translate ReadBackupSettingText}" 
-                    VerticalOptions="Center" Clicked="btnReadBackup_OnClickedAsync" Grid.Row="3" Grid.ColumnSpan="2" />
+                    VerticalOptions="Center" Clicked="btnReadBackup_OnClickedAsync"  />
             <Button x:Name="btnResetDatabase" Text="{local:Translate DatabaseResetButtonText}" VerticalOptions="Center"
-                    Clicked="btnResetDatabase_ClickedAsync" Grid.Row="4" Grid.ColumnSpan="2" />
+                    Clicked="btnResetDatabase_ClickedAsync"  />
             <!--<Button x:Name="btnShareFb" Text="{local:Translate ShareFbSettingText}" 
                     VerticalOptions="Center" Clicked="btnShareFb_OnClicked" />
             <Button x:Name="btnPay" Text="{local:Translate PaySettingText}" 
                     VerticalOptions="Center" Clicked="btnPay_OnClicked" />-->
             
-        </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -294,5 +294,23 @@ namespace Panda_Kakei.Views
         {
             SharedObject.currencySymbol = entryCurrency.Text;
         }
+
+        private void btnRegularIncomeExpense_OnClicked(object sender, EventArgs e)
+        {
+            Page newPage = new ViewRegularDataItemPage(Panda_Kakei.Resources.AppResource.RegularIncomeExpenseSettingsText,
+                Panda_Kakei.Resources.AppResource.RegularIncomeExpenseSubtitleText);
+
+            string message = Constants.ADD_EDIT_REGULAR_DATA_ITEM_MESSAGE;
+            MessagingCenter.Unsubscribe<ViewRegularDataItemPage>(this, message);
+            MessagingCenter.Subscribe<ViewRegularDataItemPage>(this, message, (RegularDataItemPage) =>
+            {
+                // Refresh calculations on MainPage
+                MessagingCenter.Send<SettingsPage>(this, Constants.REFRESH_MAIN_PAGE_BALANCE_MESSAGE);
+
+                MessagingCenter.Unsubscribe<ViewRegularDataItemPage>(this, message);
+            });
+
+            Navigation.PushAsync(newPage);
+        }
     }
 }

@@ -125,6 +125,10 @@
     <value>収入の追加</value>
     <comment>Button text for adding new income</comment>
   </data>
+  <data name="AddRegularIncomeExpenseText" xml:space="preserve">
+    <value>定期収入/出費の追加</value>
+    <comment>Title text for adding regular income or expense</comment>
+  </data>
   <data name="AddText" xml:space="preserve">
     <value>追加</value>
     <comment>Button text for adding new item</comment>
@@ -225,6 +229,10 @@
     <value>日付</value>
     <comment>Label text for date</comment>
   </data>
+  <data name="DayPickerTitleText" xml:space="preserve">
+    <value>日</value>
+    <comment>Title text for day picker</comment>
+  </data>
   <data name="DialogExternalDatabaseAccessErrorText" xml:space="preserve">
     <value>外部データベースにアクセスできませんでした。</value>
     <comment>Dialog alert text when not able to access external database</comment>
@@ -244,6 +252,14 @@
   <data name="EditIncomeText" xml:space="preserve">
     <value>収入の編集</value>
     <comment>Edit income window title</comment>
+  </data>
+  <data name="EditRegularExpenseText" xml:space="preserve">
+    <value>定期出費の編集</value>
+    <comment>Title text for editing regular expense</comment>
+  </data>
+  <data name="EditRegularIncomeText" xml:space="preserve">
+    <value>定期収入の編集</value>
+    <comment>Title text for editing regular income</comment>
   </data>
   <data name="EditText" xml:space="preserve">
     <value>編集</value>
@@ -337,6 +353,10 @@
     <value>項目別収入</value>
     <comment>Excel column income by category string</comment>
   </data>
+  <data name="IncomeExpenseText" xml:space="preserve">
+    <value>収入/出費</value>
+    <comment>Title text for category type picker</comment>
+  </data>
   <data name="IncomeLabelText" xml:space="preserve">
     <value>収入：</value>
     <comment>Label text for income</comment>
@@ -401,6 +421,30 @@
     <value>外部データベースの読み込み</value>
     <comment>Button text for SD card read backup</comment>
   </data>
+  <data name="RegularExpenseSettingsText" xml:space="preserve">
+    <value>定期出費の設定</value>
+    <comment>Regular expense settings text</comment>
+  </data>
+  <data name="RegularExpenseSubtitleText" xml:space="preserve">
+    <value>毎月発生する出費</value>
+    <comment>Regular expense description</comment>
+  </data>
+  <data name="RegularIncomeExpenseSettingsText" xml:space="preserve">
+    <value>定期収入/出費の設定</value>
+    <comment>Regular income expense settings text</comment>
+  </data>
+  <data name="RegularIncomeExpenseSubtitleText" xml:space="preserve">
+    <value>毎月発生する収入/出費</value>
+    <comment>Regular income expense description</comment>
+  </data>
+  <data name="RegularIncomeSettingsText" xml:space="preserve">
+    <value>定期収入の設定</value>
+    <comment>Regular income settings text</comment>
+  </data>
+  <data name="RegularIncomeSubtitleText" xml:space="preserve">
+    <value>毎月発生する収入</value>
+    <comment>Regular income description</comment>
+  </data>
   <data name="RemoveText" xml:space="preserve">
     <value>消去</value>
     <comment>Button text for removing item</comment>
@@ -415,7 +459,7 @@
   </data>
   <data name="SettingsText" xml:space="preserve">
     <value>設定</value>
-    <comment>settings title</comment>
+    <comment>Settings title</comment>
   </data>
   <data name="ShareFbSettingText" xml:space="preserve">
     <value>シェアして広告を無くす</value>
@@ -423,7 +467,7 @@
   </data>
   <data name="SortText" xml:space="preserve">
     <value>並び替え</value>
-    <comment>sort text</comment>
+    <comment>Sort text</comment>
   </data>
   <data name="StartPeriodText" xml:space="preserve">
     <value>開始時期</value>
