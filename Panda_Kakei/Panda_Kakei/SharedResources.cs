@@ -37,6 +37,7 @@ namespace Panda_Kakei
         public const string COMMENT_STRING = "comment";
         public const string SETTINGS_STRING = "settings";
         public const string COLOR_STRING = "color";
+        public const string LAST_ADDED_MONTH_STRING = "last_added_month";
     }
 
     public static class Paths

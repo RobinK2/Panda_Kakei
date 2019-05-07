@@ -315,9 +315,9 @@ namespace Panda_Kakei.Resources {
         /// <summary>
         ///   Day に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DayPickerTitleText {
+        internal static string DayText {
             get {
-                return ResourceManager.GetString("DayPickerTitleText", resourceCulture);
+                return ResourceManager.GetString("DayText", resourceCulture);
             }
         }
         
@@ -763,7 +763,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Regular Income/Expense に類似しているローカライズされた文字列を検索します。
+        ///   Repeating Income/Expense に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string RegularIncomeExpenseSettingsText {
             get {

@@ -26,7 +26,7 @@
             <Label Text="{local:Translate CategoryText}" Grid.Row="1" Grid.Column="1" />
             <Label Text="{local:Translate AmountText}" Grid.Row="1" Grid.Column="2" />
             <Label Text="{local:Translate MemoText}" Grid.Row="1" Grid.Column="3" />
-            <Label Text="{local:Translate DateText}" Grid.Row="1" Grid.Column="4" />
+            <Label Text="{local:Translate DayText}" Grid.Row="1" Grid.Column="4" />
             <ListView x:Name="listViewRegularData" ItemsSource="{Binding RegularDataItems}" 
                       ItemSelected="listViewRegularData_ItemSelected" Grid.Row="2" Grid.ColumnSpan="5">
                 <ListView.ItemTemplate>

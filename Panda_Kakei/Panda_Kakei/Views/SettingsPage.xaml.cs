@@ -50,7 +50,7 @@ namespace Panda_Kakei.Views
             File.Copy(srcPath, destPath, true);
         }
 
-        private async Task btnBackup_OnClickedAsync(object sender, EventArgs e)
+        private async void btnBackup_OnClickedAsync(object sender, EventArgs e)
         {
             try
             {
@@ -139,7 +139,7 @@ namespace Panda_Kakei.Views
             }
         }
 
-        private async Task btnReadBackup_OnClickedAsync(object sender, EventArgs e)
+        private async void btnReadBackup_OnClickedAsync(object sender, EventArgs e)
         {
             try
             {
@@ -242,7 +242,7 @@ namespace Panda_Kakei.Views
         //    Paths.DATABASE_EXTERNAL_STORAGE_PATH = entryExtDbPath.Text;
         //}
 
-        private async Task btnResetDatabase_ClickedAsync(object sender, EventArgs e)
+        private async void btnResetDatabase_ClickedAsync(object sender, EventArgs e)
         {
             var answer = await DisplayAlert(Panda_Kakei.Resources.AppResource.ConfirmTitleText,
                 Panda_Kakei.Resources.AppResource.DatabaseResetWarningText,

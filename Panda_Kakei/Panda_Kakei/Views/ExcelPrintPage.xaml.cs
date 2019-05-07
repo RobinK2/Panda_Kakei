@@ -72,7 +72,7 @@ namespace Panda_Kakei.Views
 
         }
 
-        private async Task btnGenerate_ClickedAsync(object sender, EventArgs e)
+        private async void btnGenerate_ClickedAsync(object sender, EventArgs e)
         {
             try
             {

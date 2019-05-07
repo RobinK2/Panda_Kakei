@@ -229,7 +229,7 @@
     <value>日付</value>
     <comment>Label text for date</comment>
   </data>
-  <data name="DayPickerTitleText" xml:space="preserve">
+  <data name="DayText" xml:space="preserve">
     <value>日</value>
     <comment>Title text for day picker</comment>
   </data>

@@ -229,7 +229,7 @@
     <value>Date</value>
     <comment>Label text for date</comment>
   </data>
-  <data name="DayPickerTitleText" xml:space="preserve">
+  <data name="DayText" xml:space="preserve">
     <value>Day</value>
     <comment>Title text for day picker</comment>
   </data>
@@ -430,7 +430,7 @@
     <comment>Regular expense description</comment>
   </data>
   <data name="RegularIncomeExpenseSettingsText" xml:space="preserve">
-    <value>Regular Income/Expense</value>
+    <value>Repeating Income/Expense</value>
     <comment>Regular income expense settings text</comment>
   </data>
   <data name="RegularIncomeExpenseSubtitleText" xml:space="preserve">

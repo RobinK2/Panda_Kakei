@@ -220,7 +220,7 @@ namespace Panda_Kakei.Views
             Navigation.PushAsync(newPage);
         }
 
-        private async Task btnRemoveCategory_ClickedAsync(object sender, EventArgs e)
+        private async void btnRemoveCategory_ClickedAsync(object sender, EventArgs e)
         {
             if (pickerCategory.SelectedIndex != -1)
             {

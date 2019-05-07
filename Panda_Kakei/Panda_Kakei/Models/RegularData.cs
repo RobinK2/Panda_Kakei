@@ -31,6 +31,9 @@ namespace Panda_Kakei.Models
         [Column(Constants.COMMENT_STRING)]
         public string Comment { get; set; }
 
+        [Column(Constants.LAST_ADDED_MONTH_STRING)]
+        public string LastAddedMonth { get; set; }
+
         public void SetMessage(string message)
         {
             this.message = message;

@@ -23,7 +23,39 @@ namespace Panda_Kakei.Views
             {
                 SharedObject.currencySymbol = SharedObject.dbManager.GetCurrencySettings();
             }
+            checkUpdateRegularData();
             refreshBalance();
+        }
+
+        private void checkUpdateRegularData()
+        {
+            string thisMonth = DateTime.Today.ToString("m");
+
+            List<RegularData> regularDataItems = SharedObject.dbManager.GetAllRegularDataItems(Constants.INCOME_STRING);
+            regularDataItems.AddRange(SharedObject.dbManager.GetAllRegularDataItems(Constants.EXPENSE_STRING));
+
+            foreach(RegularData regularData in regularDataItems)
+            {
+                if(regularData.LastAddedMonth != thisMonth)
+                {
+                    //Add regular data to data in DB
+                    Data data = new Data();
+                    data.Amount = regularData.Amount;
+                    data.Category = regularData.Category;
+                    data.CategoryType = regularData.CategoryType;
+                    data.Comment = regularData.Comment;
+                    data.Currency = regularData.Currency;
+                    data.Day = regularData.Day;
+                    data.Month = DateTime.Today.Month.ToString();
+                    data.Year = DateTime.Today.Year.ToString();
+
+                    regularData.LastAddedMonth = thisMonth;
+
+                    SharedObject.dbManager.AddDataItem(data);
+                    SharedObject.dbManager.ModifyRegularDataItem(regularData);
+                    SharedObject.dbManager.Commit();
+                }
+            }
         }
 
         private void refreshBalance()
@@ -61,6 +93,7 @@ namespace Panda_Kakei.Views
             MessagingCenter.Unsubscribe<SettingsPage>(this, message);
             MessagingCenter.Subscribe<SettingsPage>(this, message, (SettingsPage) =>
             {
+                checkUpdateRegularData();
                 refreshBalance();
             });
             Navigation.PushAsync(newPage);

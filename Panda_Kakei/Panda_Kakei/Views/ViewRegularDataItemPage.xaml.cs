@@ -44,7 +44,7 @@ namespace Panda_Kakei.Views
             }
         }
 
-        private async Task btnRemove_ClickedAsync(object sender, EventArgs e)
+        private async void btnRemove_ClickedAsync(object sender, EventArgs e)
         {
             var answer = await DisplayAlert(Panda_Kakei.Resources.AppResource.RemoveText,
                 Panda_Kakei.Resources.AppResource.DialogRemoveText,

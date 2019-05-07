@@ -9,7 +9,7 @@
             <Picker x:Name="pickerCategoryType" SelectedIndexChanged="pickerCategoryType_SelectedIndexChanged" 
                     Title="{local:Translate IncomeExpenseText}" />
             <Picker x:Name="pickerDay" SelectedIndexChanged="pickerDay_SelectedIndexChanged"
-                    Title="{local:Translate DayPickerTitleText}" />
+                    Title="{local:Translate DayText}" />
             <Picker x:Name="pickerCategory" ItemsSource="{Binding Categories}" ItemDisplayBinding="{Binding Name}" 
                     SelectedIndexChanged="pickerCategory_SelectedIndexChanged" Title="{local:Translate CategoryText}" />
 
