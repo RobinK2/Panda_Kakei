@@ -56,12 +56,12 @@ class SaveAndroid : ISave
         //Invoke the created file for viewing
         if (file.Exists())
         {
-            Android.Net.Uri path = Android.Net.Uri.FromFile(file);
-            //Android.Net.Uri path = FileProvider.GetUriForFile(((Activity)Forms.Context), "com.companyname.Panda_Kakei.fileprovider", file);
-            string extension = Android.Webkit.MimeTypeMap.GetFileExtensionFromUrl(Android.Net.Uri.FromFile(file).ToString());
+            //Android.Net.Uri path = Android.Net.Uri.FromFile(file);
+            Android.Net.Uri fileUri = FileProvider.GetUriForFile(Android.App.Application.Context, "com.companyname.Panda_Kakei.fileprovider", file);
+            string extension = Android.Webkit.MimeTypeMap.GetFileExtensionFromUrl(fileUri.ToString());
             string mimeType = Android.Webkit.MimeTypeMap.Singleton.GetMimeTypeFromExtension(extension);
             Intent intent = new Intent(Intent.ActionView);
-            intent.SetDataAndType(path, mimeType);
+            intent.SetDataAndType(fileUri, mimeType);
 
             //Forms.Context.StartActivity(Intent.CreateChooser(intent, "Choose App"));
             Android.App.Application.Context.StartActivity(Intent.CreateChooser(intent, "Choose App"));

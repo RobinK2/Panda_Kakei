@@ -300,6 +300,7 @@ namespace Panda_Kakei.Views
                 SharedObject.dbManager.AddRegularDataItem(regularDataItem);
                 MessagingCenter.Send<RegularDataItemPage>(this, Constants.ADDED_REGULAR_DATA_ITEM_MESSAGE);
             }
+            SharedObject.dbManager.Commit();
 
             this.Navigation.PopAsync();
         }
