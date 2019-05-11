@@ -222,7 +222,7 @@
     <comment>Dialog text for database reset failed</comment>
   </data>
   <data name="DatabaseResetWarningText" xml:space="preserve">
-    <value>アプリ内に保存した家計簿データが全て失われてしまいます。よろしいですか？</value>
+    <value>アプリ内に保存した家計簿データが全て失われてしまいます。本当によろしいですか？</value>
     <comment>Dialog text for database reset warning</comment>
   </data>
   <data name="DateText" xml:space="preserve">

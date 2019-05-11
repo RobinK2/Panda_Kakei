@@ -222,7 +222,7 @@
     <comment>Dialog text for database reset failed</comment>
   </data>
   <data name="DatabaseResetWarningText" xml:space="preserve">
-    <value>Are you sure you want to delete all your financial data stored in this app?</value>
+    <value>Are you really sure you want to delete all your financial data stored in this app?</value>
     <comment>Dialog text for database reset warning</comment>
   </data>
   <data name="DateText" xml:space="preserve">

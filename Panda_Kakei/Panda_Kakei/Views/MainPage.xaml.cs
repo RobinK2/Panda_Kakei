@@ -29,7 +29,7 @@ namespace Panda_Kakei.Views
 
         private void checkUpdateRegularData()
         {
-            string thisMonth = DateTime.Today.ToString("m");
+            string thisMonth = DateTime.Today.ToString("y");
 
             List<RegularData> regularDataItems = SharedObject.dbManager.GetAllRegularDataItems(Constants.INCOME_STRING);
             regularDataItems.AddRange(SharedObject.dbManager.GetAllRegularDataItems(Constants.EXPENSE_STRING));

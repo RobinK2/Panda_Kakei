@@ -295,7 +295,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Are you sure you want to delete all your financial data stored in this app? に類似しているローカライズされた文字列を検索します。
+        ///   Are you really sure you want to delete all your financial data stored in this app? に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DatabaseResetWarningText {
             get {

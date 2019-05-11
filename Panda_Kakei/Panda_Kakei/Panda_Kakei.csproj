@@ -4,6 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <DebugType>pdbonly</DebugType>
     <AssemblyName>Panda_Kakei</AssemblyName>
+    <Copyright>Robin Kase</Copyright>
+    <Authors>Robin Kase</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

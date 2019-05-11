@@ -238,7 +238,7 @@
     <comment>Dialog alert text when not able to access external database</comment>
   </data>
   <data name="DialogReadBackupWarningText" xml:space="preserve">
-    <value>All data som ligger sparad lokalt i appen kommer att skrivas över. Är det ok?</value>
+    <value>All data som ligger sparad lokalt i appen kommer att skrivas över. Är du verkligen säker på att det är ok?</value>
     <comment>Warning text displayed when reading external database</comment>
   </data>
   <data name="DialogRemoveText" xml:space="preserve">
