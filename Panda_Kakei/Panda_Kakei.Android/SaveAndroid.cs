@@ -26,21 +26,6 @@ class SaveAndroid : ISave
     //Method to save document as a file in Android and view the saved document
     public async Task SaveAndView(string fileName, String contentType, MemoryStream stream)
     {
-        //string root = null;
-        ////Get the root path in android device.
-        //if (Android.OS.Environment.IsExternalStorageEmulated)
-        //{
-        //    root = Android.OS.Environment.ExternalStorageDirectory.ToString();
-        //}
-        //else
-        //{
-        //    root = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        //}
-
-        ////Create directory and file 
-        //Java.IO.File myDir = new Java.IO.File(root + "/Panda_Kakei");
-        //myDir.Mkdir();
-
         Java.IO.File file = new Java.IO.File(fileName);
 
         //Remove if the file exists
@@ -65,15 +50,17 @@ class SaveAndroid : ISave
             {
                 fileUri = Android.Net.Uri.FromFile(file);
             }
-            //Android.Net.Uri path = Android.Net.Uri.FromFile(file);
             string extension = Android.Webkit.MimeTypeMap.GetFileExtensionFromUrl(fileUri.ToString());
             string mimeType = Android.Webkit.MimeTypeMap.Singleton.GetMimeTypeFromExtension(extension);
-            Intent intent = new Intent(Intent.ActionView);
-            intent.SetDataAndType(fileUri, mimeType);
-            intent.AddFlags(ActivityFlags.GrantReadUriPermission | ActivityFlags.GrantWriteUriPermission);
+            Intent actionIntent = new Intent(Intent.ActionView);
+            actionIntent.SetDataAndType(fileUri, mimeType);
+            actionIntent.AddFlags(ActivityFlags.GrantReadUriPermission | ActivityFlags.GrantWriteUriPermission
+                            | ActivityFlags.NewTask | ActivityFlags.MultipleTask);
 
-            //Forms.Context.StartActivity(Intent.CreateChooser(intent, "Choose App"));
-            Android.App.Application.Context.StartActivity(Intent.CreateChooser(intent, "Choose App"));
+            Intent chooserIntent = Intent.CreateChooser(actionIntent, "Choose App");
+            chooserIntent.AddFlags(ActivityFlags.NewTask | ActivityFlags.MultipleTask);
+
+            Android.App.Application.Context.StartActivity(chooserIntent);
         }
     }
 }
