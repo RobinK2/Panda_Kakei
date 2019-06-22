@@ -16,8 +16,6 @@ namespace Panda_Kakei.Services
         private uint yearStart;
         private uint monthEnd;
         private uint yearEnd;
-
-        private const uint MAX_CELL_NUMBER = 30;
         
         public ExcelPrinter(string monthStart, string yearStart,
             string monthEnd, string yearEnd)
@@ -85,21 +83,12 @@ namespace Panda_Kakei.Services
 
         private string generateSumString(in Dictionary<string, List<string>> cellMap, string key)
         {
-            uint cellCount = 0;
-            string sum = "=SUM(";
-            foreach (string cell in cellMap[key])
+            string sum = "=";
+            foreach(string cell in cellMap[key])
             {
-                cellCount++;
-                if (MAX_CELL_NUMBER <= cellCount)
-                {
-                    cellCount = 1;
-                    sum.Remove(sum.Length - 2, 2);
-                    sum += ") + SUM(";
-                }
-                sum += cell + ", ";
+                sum += cell + " + ";
             }
-            sum.Remove(sum.Length - 2, 2);
-            sum += ")";
+            sum = sum.Remove(sum.Length - 3, 3);
 
             return sum;
         }
