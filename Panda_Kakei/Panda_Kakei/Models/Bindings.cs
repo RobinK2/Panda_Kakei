@@ -7,9 +7,8 @@ using Panda_Kakei.Services;
 
 namespace Panda_Kakei.Models
 {
-    public class CategoryModel : INotifyPropertyChanged
+    public class CategoryModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<DataSettings> Categories { get; set; }
 
         public CategoryModel()
@@ -59,9 +58,8 @@ namespace Panda_Kakei.Models
         public string DateText { get; set; }
     }
 
-    public class ItemModel : INotifyPropertyChanged
+    public class ItemModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<Item> Items { get; }
         public ItemModel()
         {
@@ -82,9 +80,8 @@ namespace Panda_Kakei.Models
         public string Name { get; set; }
     }
 
-    public class SortOptionModel : INotifyPropertyChanged
+    public class SortOptionModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<SortOption> SortOptions { get; }
         public SortOptionModel()
         {
@@ -147,10 +144,8 @@ namespace Panda_Kakei.Models
         public string DayText { get; set; }
     }
 
-    public class RegularDataItemModel : INotifyPropertyChanged
+    public class RegularDataItemModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
         public ObservableCollection<RegularDataItem> RegularDataItems { get; }
 
         public RegularDataItemModel()

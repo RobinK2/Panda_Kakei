@@ -20,7 +20,6 @@ namespace Panda_Kakei.Views
         private int endMonth;
         private int startYear;
         private int endYear;
-        string excelPath;
 
 		public ExcelPrintPage ()
 		{
@@ -96,7 +95,7 @@ namespace Panda_Kakei.Views
                     Services.ExcelPrinter printer = new Services.ExcelPrinter(startMonth.ToString(), startYear.ToString(),
                         endMonth.ToString(), endYear.ToString());
 
-                    await printer.PrintExcel(Paths.EXCEL_STORAGE_PATH);
+                    printer.PrintExcel(Paths.EXCEL_STORAGE_PATH);
 
                     await DisplayAlert(Panda_Kakei.Resources.AppResource.ExcelReportCompleteTitle,
                         Panda_Kakei.Resources.AppResource.ExcelReportCompleteText + "\r\n" + Paths.EXCEL_STORAGE_PATH,

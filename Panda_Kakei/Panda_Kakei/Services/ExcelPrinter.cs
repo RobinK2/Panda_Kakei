@@ -26,7 +26,7 @@ namespace Panda_Kakei.Services
             this.yearEnd = uint.Parse(yearEnd);
         }
         
-        public async Task PrintExcel(string filename)
+        public void PrintExcel(string filename)
         {
             //Create an instance of ExcelEngine.
             using (ExcelEngine excelEngine = new ExcelEngine())
@@ -77,7 +77,7 @@ namespace Panda_Kakei.Services
                 workbook.Close();
 
                 //Save the stream as a file in the device and invoke it for viewing
-                await Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView(filename, "application/msexcel", stream);
+                Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView(filename, "application/msexcel", stream);
             }
         }
 

@@ -24,7 +24,7 @@ class SaveAndroid : ISave
 
 
     //Method to save document as a file in Android and view the saved document
-    public async Task SaveAndView(string fileName, String contentType, MemoryStream stream)
+    public void SaveAndView(string fileName, String contentType, MemoryStream stream)
     {
         Java.IO.File file = new Java.IO.File(fileName);
 
