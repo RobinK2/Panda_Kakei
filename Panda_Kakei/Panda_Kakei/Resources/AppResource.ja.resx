@@ -237,9 +237,13 @@
     <value>外部データベースにアクセスできませんでした。</value>
     <comment>Dialog alert text when not able to access external database</comment>
   </data>
-  <data name="DialogReadBackupWarningText" xml:space="preserve">
+  <data name="DialogReadBackupWarningText1" xml:space="preserve">
+    <value>次のファイルからデータバルを読み込みます：</value>
+    <comment>Warning text displayed when reading external database 1</comment>
+  </data>
+  <data name="DialogReadBackupWarningText2" xml:space="preserve">
     <value>アプリ内に保存されているデータは全て上書きされます。よろしいですか？</value>
-    <comment>Warning text displayed when reading external database</comment>
+    <comment>Warning text displayed when reading external database 2</comment>
   </data>
   <data name="DialogRemoveText" xml:space="preserve">
     <value>本当に消去しますか？</value>

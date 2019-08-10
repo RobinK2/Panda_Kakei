@@ -34,16 +34,6 @@ namespace Panda_Kakei.Views
             }
         }
 
-        private void btnEndDate_OnClicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnChangeColour_OnClicked(object sender, EventArgs e)
-        {
-
-        }
-
         private void copyDatabase(string srcPath, string destPath)
         {
             File.Copy(srcPath, destPath, true);
@@ -159,8 +149,10 @@ namespace Panda_Kakei.Views
 
                 if (status == PermissionStatus.Granted)
                 {
+                    string message = Panda_Kakei.Resources.AppResource.DialogReadBackupWarningText1 + Paths.DATABASE_EXTERNAL_STORAGE_PATH +
+                        "\r\n" + Panda_Kakei.Resources.AppResource.DialogReadBackupWarningText2;
                     var answer = await DisplayAlert(Panda_Kakei.Resources.AppResource.ReadBackupSettingText,
-                        Panda_Kakei.Resources.AppResource.DialogReadBackupWarningText, Panda_Kakei.Resources.AppResource.YesText,
+                        message, Panda_Kakei.Resources.AppResource.YesText,
                         Panda_Kakei.Resources.AppResource.NoText);
 
                     // Answer is yes, overwrite local database with external database
@@ -224,16 +216,6 @@ namespace Panda_Kakei.Views
                     Panda_Kakei.Resources.AppResource.DialogExternalDatabaseAccessErrorText,
                     Panda_Kakei.Resources.AppResource.OkText);
             }
-        }
-
-        private void btnShareFb_OnClicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPay_OnClicked(object sender, EventArgs e)
-        {
-
         }
 
         private async void btnResetDatabase_ClickedAsync(object sender, EventArgs e)

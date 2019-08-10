@@ -331,11 +331,20 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
+        ///   Will load database from following file:  に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DialogReadBackupWarningText1 {
+            get {
+                return ResourceManager.GetString("DialogReadBackupWarningText1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   All data saved locally in the app will be overwritten. Is that ok? に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string DialogReadBackupWarningText {
+        internal static string DialogReadBackupWarningText2 {
             get {
-                return ResourceManager.GetString("DialogReadBackupWarningText", resourceCulture);
+                return ResourceManager.GetString("DialogReadBackupWarningText2", resourceCulture);
             }
         }
         
