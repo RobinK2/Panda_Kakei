@@ -12,13 +12,9 @@ namespace Panda_Kakei.Droid
         public static string GetLocalFilePath(string filename)
         {
             string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-
-            //string folder = "/storage/emulated/0/Android/data/com.companyname.Panda_Kakei/files";
-
+            
             string dbPath = System.IO.Path.Combine(folder, filename);
-
-            //copyDatabaseIfNotExists(dbPath, filename);
-
+            
             return dbPath;
         }
 

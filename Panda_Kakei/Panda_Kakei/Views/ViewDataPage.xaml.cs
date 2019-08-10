@@ -136,8 +136,7 @@ namespace Panda_Kakei.Views
         {
             this.selectedYear = DateTime.ParseExact((e.NewValue as IList)[0].ToString(), "yyyy", CultureInfo.CurrentCulture).Year;
             this.selectedMonth = DateTime.ParseExact((e.NewValue as IList)[1].ToString(), "MMMM", CultureInfo.CurrentCulture).Month;
-            //this.btnSetDate.Text = (e.NewValue as IList)[0].ToString() + "\t" + (e.NewValue as IList)[1].ToString();
-
+            
             updateBtnSetDateText();
             populateItemModel();
         }

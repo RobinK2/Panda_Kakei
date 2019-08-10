@@ -49,16 +49,11 @@ namespace Panda_Kakei
             populateDateCollection();
             this.ItemsSource = Date;
             this.ColumnHeaderText = Headers;
-            //this.SelectionChanged += customDatePicker_SelectionChanged;
             ShowFooter = true;
             ShowHeader = false;
             ShowColumnHeader = true;
         }
-
-        //private void customDatePicker_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-        //}
-        
+                
         private void populateDateCollection()
         {
             int startYear = 1990;

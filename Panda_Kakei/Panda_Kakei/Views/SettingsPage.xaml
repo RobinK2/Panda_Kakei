@@ -8,23 +8,12 @@
     <ContentPage.Content>
         <StackLayout Padding="15, 25, 15, 15" Spacing="15" >
 
-            <!--<Button x:Name="btnEndDate" Text="{local:Translate EndDateSettingText}"
-                    VerticalOptions="Center" Clicked="btnEndDate_OnClicked" />-->
-            <!--<Button x:Name="btnChangeColour" Text="{local:Translate ChangeColourSettingText}" 
-                    VerticalOptions="Center" Clicked="btnChangeColour_OnClicked" Grid.Row="0" Grid.ColumnSpan="2" />-->
-            <!--<Label x:Name="lblShowDbPath" Text="{local:Translate ExtDbPathText}" 
-                    VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" />
-            <Entry x:Name="entryExtDbPath" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.Column="1"
-                   IsEnabled="False" />-->
             <StackLayout Orientation="Horizontal" FlowDirection="RightToLeft" Spacing="15">
                 <Entry x:Name="entryCurrency" Text="{x:Static local:SharedObject.currencySymbol}" VerticalOptions="Center"
                        HorizontalOptions="Center" TextChanged="entryCurrency_TextChanged" />
                 <Label Text="{local:Translate CurrencySettingText}" VerticalOptions="Center" HorizontalOptions="Center" />
             </StackLayout>
             
-
-            <!--<Button x:Name="btnRestoreExtDbPath" Text="{local:Translate ExtDbPathDefaultButtonText}" VerticalOptions="Center"
-                    Clicked="btnRestoreExtDbPath_ClickedAsync" Grid.Row="3" Grid.ColumnSpan="2" />-->
             <Button x:Name="btnRegularIncomeExpense" Text="{local:Translate RegularIncomeExpenseSettingsText}"
                     VerticalOptions="Center" Clicked="btnRegularIncomeExpense_OnClicked" />
             <Button x:Name="btnBackup" Text="{local:Translate BackupSettingText}" 
@@ -33,10 +22,6 @@
                     VerticalOptions="Center" Clicked="btnReadBackup_OnClickedAsync"  />
             <Button x:Name="btnResetDatabase" Text="{local:Translate DatabaseResetButtonText}" VerticalOptions="Center"
                     Clicked="btnResetDatabase_ClickedAsync"  />
-            <!--<Button x:Name="btnShareFb" Text="{local:Translate ShareFbSettingText}" 
-                    VerticalOptions="Center" Clicked="btnShareFb_OnClicked" />
-            <Button x:Name="btnPay" Text="{local:Translate PaySettingText}" 
-                    VerticalOptions="Center" Clicked="btnPay_OnClicked" />-->
             
         </StackLayout>
     </ContentPage.Content>

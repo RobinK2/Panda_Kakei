@@ -22,7 +22,6 @@ namespace Panda_Kakei.Views
         {
             InitializeComponent();
 
-            //this.entryExtDbPath.Text = Paths.DATABASE_EXTERNAL_STORAGE_PATH;
             oldCurrencySymbol = SharedObject.currencySymbol;
         }
 
@@ -237,11 +236,6 @@ namespace Panda_Kakei.Views
 
         }
 
-        //private void entryExtDbPath_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //    Paths.DATABASE_EXTERNAL_STORAGE_PATH = entryExtDbPath.Text;
-        //}
-
         private async void btnResetDatabase_ClickedAsync(object sender, EventArgs e)
         {
             var answer = await DisplayAlert(Panda_Kakei.Resources.AppResource.ConfirmTitleText,
@@ -271,22 +265,6 @@ namespace Panda_Kakei.Views
                 await DisplayAlert(Panda_Kakei.Resources.AppResource.CompletedTitleText,
                     Panda_Kakei.Resources.AppResource.DatabaseResetCompleteText,
                     Panda_Kakei.Resources.AppResource.OkText);
-            }
-        }
-
-        private async Task btnRestoreExtDbPath_ClickedAsync(object sender, EventArgs e)
-        {
-            if(Paths.DATABASE_EXTERNAL_STORAGE_PATH != Paths.DEFAULT_DATABASE_EXTERNAL_STORAGE_PATH)
-            {
-                var answer = await DisplayAlert(Panda_Kakei.Resources.AppResource.ConfirmTitleText,
-                    Panda_Kakei.Resources.AppResource.ExtDbPathDefaultWarningText,
-                    Panda_Kakei.Resources.AppResource.YesText,
-                    Panda_Kakei.Resources.AppResource.NoText);
-
-                if(answer == true)
-                {
-                    //this.entryExtDbPath.Text = Paths.DEFAULT_DATABASE_EXTERNAL_STORAGE_PATH;
-                }
             }
         }
 

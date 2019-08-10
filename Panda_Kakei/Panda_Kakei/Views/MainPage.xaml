@@ -10,15 +10,6 @@
     </ContentPage.ToolbarItems>
 
     <Grid Padding="15, 25, 15, 15">
-        <!--<Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>-->
 
         <Label Text="{local:Translate IncomeThisMonthText}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" />
         <Entry x:Name="entryIncome" IsEnabled="False" Grid.Column="2" Grid.Row="0" />

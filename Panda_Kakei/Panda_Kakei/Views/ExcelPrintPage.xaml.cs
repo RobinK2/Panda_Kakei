@@ -34,8 +34,6 @@ namespace Panda_Kakei.Views
                 "\t\t" + CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Now.Date.Month);
             this.btnEndDate.Text = DateTime.Now.Date.Year.ToString() +
                 "\t\t" + CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Now.Date.Month);
-
-            //entryExcelPath.Text = Paths.EXCEL_STORAGE_PATH;
         }
 
         private void btnStartDate_Clicked(object sender, EventArgs e)
@@ -112,10 +110,5 @@ namespace Panda_Kakei.Views
                     Panda_Kakei.Resources.AppResource.OkText);
             }
         }
-
-        //private void entryExcelPath_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //    Paths.EXCEL_STORAGE_PATH = entryExcelPath.Text;
-        //}
     }
 }

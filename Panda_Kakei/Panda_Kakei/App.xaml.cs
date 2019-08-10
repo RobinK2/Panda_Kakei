@@ -31,7 +31,6 @@ namespace Panda_Kakei
             Paths.DEFAULT_DATABASE_EXTERNAL_STORAGE_PATH = extStoragePath;
             Paths.EXCEL_STORAGE_PATH = System.IO.Path.Combine(excelPath,
                 Panda_Kakei.Resources.AppResource.HouseholdAccountText + ".xlsx");
-            //Paths.EXCEL_STORAGE_PATH = System.IO.Path.Combine(excelPath, "Report.xlsx");
         }
 
         public App(string dbPath, string extStoragePath) : this(dbPath)
