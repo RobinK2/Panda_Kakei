@@ -12,7 +12,7 @@ namespace Panda_Kakei.Views
         public MainPage()
         {
             InitializeComponent();
-
+            
             SharedObject.dbManager = new DataManager(Paths.DATABASE_PATH);
             SharedObject.currencySymbol = Panda_Kakei.Resources.AppResource.CurrencyText;
             if(0 == SharedObject.dbManager.GetAppSettingsCount())
