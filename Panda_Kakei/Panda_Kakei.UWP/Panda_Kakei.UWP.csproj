@@ -154,8 +154,8 @@
     <PackageReference Include="Syncfusion.Xamarin.XlsIO">
       <Version>17.1.0.52</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.497661" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.8" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.778463" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.9" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Panda_Kakei\Panda_Kakei.csproj">
