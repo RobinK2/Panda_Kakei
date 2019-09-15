@@ -6,6 +6,11 @@
              x:Class="Panda_Kakei.Views.ExcelPrintPage"
              Title="{local:Translate ExcelReportText}"
              >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="icon.png" />
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
 
         <Grid Padding="15, 25, 15, 15" RowSpacing="15">

@@ -4,6 +4,11 @@
              x:Class="Panda_Kakei.Views.RegularDataItemPage"
              xmlns:local="clr-namespace:Panda_Kakei"
              >
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="icon.png" />
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <StackLayout Padding="15, 25, 15, 15" Spacing="15">
             <Picker x:Name="pickerCategoryType" SelectedIndexChanged="pickerCategoryType_SelectedIndexChanged" 

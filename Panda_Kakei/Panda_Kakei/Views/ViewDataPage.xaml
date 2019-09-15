@@ -6,6 +6,11 @@
              x:Class="Panda_Kakei.Views.ViewDataPage"
              Title="{local:Translate ViewDataText}"
              >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="icon.png" />
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
 
         <Grid Padding="15, 25, 15, 15" RowSpacing="15">

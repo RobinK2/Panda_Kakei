@@ -5,6 +5,10 @@
              x:Class="Panda_Kakei.Views.SettingsPage"
              Title="{local:Translate SettingsText}">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="icon.png" />
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <StackLayout Padding="15, 25, 15, 15" Spacing="15" >
 
