@@ -255,8 +255,10 @@ namespace Panda_Kakei.Views
             SharedObject.currencySymbol = entryCurrency.Text;
         }
 
-        private void btnRegularIncomeExpense_OnClicked(object sender, EventArgs e)
+        private async void btnRegularIncomeExpense_OnClicked(object sender, EventArgs e)
         {
+            btnRegularIncomeExpense.IsEnabled = false;
+
             Page newPage = new ViewRegularDataItemPage(Panda_Kakei.Resources.AppResource.RegularIncomeExpenseSettingsText,
                 Panda_Kakei.Resources.AppResource.RegularIncomeExpenseSubtitleText);
 
@@ -270,7 +272,9 @@ namespace Panda_Kakei.Views
                 MessagingCenter.Unsubscribe<ViewRegularDataItemPage>(this, message);
             });
 
-            Navigation.PushAsync(newPage);
+            await Navigation.PushAsync(newPage);
+
+            btnRegularIncomeExpense.IsEnabled = true;
         }
     }
 }

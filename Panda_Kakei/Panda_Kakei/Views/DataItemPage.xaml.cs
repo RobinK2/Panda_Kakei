@@ -75,7 +75,7 @@ namespace Panda_Kakei.Views
             }
         }
 
-        private void btnAddCategory_Clicked(object sender, EventArgs e)
+        private async void btnAddCategory_Clicked(object sender, EventArgs e)
         {
             CategoryType categoryTypeEnum;
             string message = string.Empty;
@@ -95,6 +95,8 @@ namespace Panda_Kakei.Views
                 return;
             }
 
+            btnAddCategory.IsEnabled = false;
+
             Page newPage = new NewCategoryPage(categoryTypeEnum);
             MessagingCenter.Unsubscribe<NewCategoryPage, string>(this, message);
             MessagingCenter.Subscribe<NewCategoryPage, string>(this, message, (messageSender, arg) =>
@@ -106,7 +108,9 @@ namespace Panda_Kakei.Views
                 MessagingCenter.Unsubscribe<NewCategoryPage, string>(this, message);
             });
 
-            Navigation.PushAsync(newPage);
+            await Navigation.PushAsync(newPage);
+
+            btnAddCategory.IsEnabled = true;
         }
 
         private async void btnRemoveCategory_ClickedAsync(object sender, EventArgs e)

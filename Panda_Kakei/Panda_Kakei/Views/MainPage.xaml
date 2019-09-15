@@ -13,7 +13,7 @@
     </NavigationPage.TitleView>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="MenuItemSettings" Clicked="menuItemSettings_OnClicked" Text="{local:Translate SettingsText}"/>
+        <ToolbarItem x:Name="MenuItemSettings" Clicked="menuItemSettings_OnClicked" Text="{local:Translate SettingsText}"/>
     </ContentPage.ToolbarItems>
 
     <Grid Padding="15, 25, 15, 15">

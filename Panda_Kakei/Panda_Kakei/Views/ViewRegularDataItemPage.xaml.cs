@@ -63,8 +63,10 @@ namespace Panda_Kakei.Views
             MessagingCenter.Send<ViewRegularDataItemPage>(this, Constants.ADD_EDIT_REGULAR_DATA_ITEM_MESSAGE);
         }
 
-        private void btnAdd_Clicked(object sender, EventArgs e)
+        private async void btnAdd_Clicked(object sender, EventArgs e)
         {
+            btnAdd.IsEnabled = false;
+
             Page newPage = new RegularDataItemPage(Panda_Kakei.Resources.AppResource.AddRegularIncomeExpenseText);
             string message = Constants.ADDED_REGULAR_DATA_ITEM_MESSAGE;
             MessagingCenter.Unsubscribe<RegularDataItemPage>(this, message);
@@ -77,10 +79,12 @@ namespace Panda_Kakei.Views
                 MessagingCenter.Unsubscribe<RegularDataItemPage>(this, message);
             });
 
-            Navigation.PushAsync(newPage);
+            await Navigation.PushAsync(newPage);
+
+            btnAdd.IsEnabled = true;
         }
 
-        private void btnEdit_Clicked(object sender, EventArgs e)
+        private async void btnEdit_Clicked(object sender, EventArgs e)
         {
             RegularDataItem selectedItem = (RegularDataItem) listViewRegularData.SelectedItem;
             RegularData editItem = selectedItem.DbRegDataItem;
@@ -95,6 +99,8 @@ namespace Panda_Kakei.Views
                 title = Panda_Kakei.Resources.AppResource.EditRegularIncomeText;
             }
 
+            btnEdit.IsEnabled = false;
+
             string message = Constants.EDITED_REGULAR_DATA_ITEM_MESSAGE;
             Page newPage = new RegularDataItemPage(title, true, editItem);
             MessagingCenter.Unsubscribe<RegularDataItemPage>(this, message);
@@ -107,7 +113,9 @@ namespace Panda_Kakei.Views
                 MessagingCenter.Unsubscribe<RegularDataItemPage>(this, message);
             });
 
-            Navigation.PushAsync(newPage);
+            await Navigation.PushAsync(newPage);
+
+            btnEdit.IsEnabled = true;
         }
 
         private void listViewRegularData_ItemSelected(object sender, SelectedItemChangedEventArgs e)

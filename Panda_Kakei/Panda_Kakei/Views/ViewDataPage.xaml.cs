@@ -145,7 +145,7 @@ namespace Panda_Kakei.Views
         {
         }
 
-        private void btnEdit_Clicked(object sender, EventArgs e)
+        private async void btnEdit_Clicked(object sender, EventArgs e)
         {
             Item selectedItem = (Item)listViewItems.SelectedItem;
             Data editItem = selectedItem.DbDataItem;
@@ -160,6 +160,8 @@ namespace Panda_Kakei.Views
                 title = Panda_Kakei.Resources.AppResource.EditIncomeText;
             }
 
+            btnEdit.IsEnabled = false;
+
             string message = Constants.EDIT_DATA_ITEM_MESSAGE;
             Page newPage = new DataItemPage(title, editItem.CategoryType, true, editItem);
             MessagingCenter.Unsubscribe<DataItemPage>(this, message);
@@ -171,7 +173,9 @@ namespace Panda_Kakei.Views
                 MessagingCenter.Unsubscribe<DataItemPage>(this, message);
             });
 
-            Navigation.PushAsync(newPage);
+            await Navigation.PushAsync(newPage);
+
+            btnEdit.IsEnabled = true;
         }
 
         private async void btnRemove_ClickedAsync(object sender, EventArgs e)

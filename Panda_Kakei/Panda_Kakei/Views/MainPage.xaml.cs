@@ -86,8 +86,10 @@ namespace Panda_Kakei.Views
             entryBalance.Text = balance.ToString();
         }
 
-        private void menuItemSettings_OnClicked(object sender, EventArgs e)
+        private async void menuItemSettings_OnClicked(object sender, EventArgs e)
         {
+            MenuItemSettings.IsEnabled = false;
+
             Page newPage = new SettingsPage();
             string message = Constants.REFRESH_MAIN_PAGE_BALANCE_MESSAGE;
             MessagingCenter.Unsubscribe<SettingsPage>(this, message);
@@ -96,11 +98,15 @@ namespace Panda_Kakei.Views
                 checkUpdateRegularData();
                 refreshBalance();
             });
-            Navigation.PushAsync(newPage);
+            await Navigation.PushAsync(newPage);
+
+            MenuItemSettings.IsEnabled = true;
         }
 
-        private void btnAddExpense_OnClicked(object sender, EventArgs e)
+        private async void btnAddExpense_OnClicked(object sender, EventArgs e)
         {
+            btnAddExpense.IsEnabled = false;
+
             Page newPage = new DataItemPage(Panda_Kakei.Resources.AppResource.AddExpenseText, Constants.EXPENSE_STRING);
             string message = Constants.REFRESH_MAIN_PAGE_BALANCE_MESSAGE;
             MessagingCenter.Unsubscribe<DataItemPage>(this, message);
@@ -111,11 +117,15 @@ namespace Panda_Kakei.Views
                 MessagingCenter.Unsubscribe<DataItemPage>(this, message);
             });
 
-            Navigation.PushAsync(newPage);
+            await Navigation.PushAsync(newPage);
+
+            btnAddExpense.IsEnabled = true;
         }
 
-        private void btnAddIncome_OnClicked(object sender, EventArgs e)
-        {            
+        private async void btnAddIncome_OnClicked(object sender, EventArgs e)
+        {
+            btnAddIncome.IsEnabled = false;
+
             Page newPage = new DataItemPage(Panda_Kakei.Resources.AppResource.AddIncomeText, Constants.INCOME_STRING);
             string message = Constants.REFRESH_MAIN_PAGE_BALANCE_MESSAGE;
             MessagingCenter.Unsubscribe<DataItemPage>(this, message);
@@ -126,11 +136,15 @@ namespace Panda_Kakei.Views
                 MessagingCenter.Unsubscribe<DataItemPage>(this, message);
             });
 
-            Navigation.PushAsync(newPage);
+            await Navigation.PushAsync(newPage);
+
+            btnAddIncome.IsEnabled = true;
         }
 
-        private void btnViewData_OnClicked(object sender, EventArgs e)
+        private async void btnViewData_OnClicked(object sender, EventArgs e)
         {
+            btnViewData.IsEnabled = false;
+
             Page newPage = new ViewDataPage();
             string message = Constants.REFRESH_MAIN_PAGE_BALANCE_MESSAGE;
             MessagingCenter.Unsubscribe<ViewDataPage>(this, message);
@@ -140,13 +154,19 @@ namespace Panda_Kakei.Views
 
                 MessagingCenter.Unsubscribe<ViewDataPage>(this, message);
             });
-            Navigation.PushAsync(newPage);
+            await Navigation.PushAsync(newPage);
+
+            btnViewData.IsEnabled = true;
         }
 
-        private void btnExcelReport_OnClicked(object sender, EventArgs e)
+        private async void btnExcelReport_OnClicked(object sender, EventArgs e)
         {
+            btnExcelReport.IsEnabled = false;
+
             Page newPage = new ExcelPrintPage();
-            Navigation.PushAsync(newPage);
+            await Navigation.PushAsync(newPage);
+
+            btnExcelReport.IsEnabled = true;
         }
     }
 }
