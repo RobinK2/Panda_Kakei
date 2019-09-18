@@ -124,7 +124,7 @@ namespace Panda_Kakei.Resources {
         }
         
         /// <summary>
-        ///   Copy Database to External Folder に類似しているローカライズされた文字列を検索します。
+        ///   Backup Database to External Folder に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string BackupSettingText {
             get {

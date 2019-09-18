@@ -146,7 +146,7 @@
     <comment>Label text for amount of money</comment>
   </data>
   <data name="BackupSettingText" xml:space="preserve">
-    <value>Kopiera databas till extern map</value>
+    <value>Backa upp databasen i extern map</value>
     <comment>Button text for SD card backup</comment>
   </data>
   <data name="BalanceLabelText" xml:space="preserve">
