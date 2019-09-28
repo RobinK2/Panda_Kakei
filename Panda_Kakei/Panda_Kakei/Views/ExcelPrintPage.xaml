@@ -4,12 +4,16 @@
              xmlns:syncfusion="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
              xmlns:local="clr-namespace:Panda_Kakei"
              x:Class="Panda_Kakei.Views.ExcelPrintPage"
-             Title="{local:Translate ExcelReportText}"
              >
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="icon.png" />
-    </ContentPage.ToolbarItems>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="5">
+            <Label Text="{local:Translate ExcelReportText}" FontSize="Large" 
+                   FontFamily="Humanist Sans-serif" TextColor="White" VerticalTextAlignment="Center"
+                   HorizontalOptions="StartAndExpand" />
+            <Image Source="icon.png" HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
 

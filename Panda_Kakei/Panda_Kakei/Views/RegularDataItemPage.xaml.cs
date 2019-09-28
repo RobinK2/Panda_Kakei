@@ -38,6 +38,7 @@ namespace Panda_Kakei.Views
 
             this.categoryModel = new CategoryModel();
             this.BindingContext = this.categoryModel;
+            this.lblTitle.Text = title;
             this.Title = title;
 
             populatePickerCategoryType();

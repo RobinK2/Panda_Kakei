@@ -5,9 +5,14 @@
              xmlns:local="clr-namespace:Panda_Kakei"
              >
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="icon.png" />
-    </ContentPage.ToolbarItems>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="5">
+            <Label x:Name="lblTitle" FontSize="Large" 
+                   FontFamily="Humanist Sans-serif" TextColor="White" VerticalTextAlignment="Center"
+                   HorizontalOptions="StartAndExpand" />
+            <Image Source="icon.png" HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <StackLayout Padding="15, 25, 15, 15" Spacing="15">

@@ -3,12 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Panda_Kakei"
              x:Class="Panda_Kakei.Views.NewCategoryPage"
-             Title="{local:Translate NewCategoryText}"
              >
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="icon.png" />
-    </ContentPage.ToolbarItems>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="5">
+            <Label Text="{local:Translate NewCategoryText}" FontSize="Large" 
+                   FontFamily="Humanist Sans-serif" TextColor="White" VerticalTextAlignment="Center"
+                   HorizontalOptions="StartAndExpand" />
+            <Image Source="icon.png" HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
     
     <ContentPage.Content>
         <StackLayout Padding="15, 25, 15, 15" Spacing="15">

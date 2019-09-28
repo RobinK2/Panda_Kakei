@@ -263,8 +263,7 @@ namespace Panda_Kakei.Views
         {
             btnRegularIncomeExpense.IsEnabled = false;
 
-            Page newPage = new ViewRegularDataItemPage(Panda_Kakei.Resources.AppResource.RegularIncomeExpenseSettingsText,
-                Panda_Kakei.Resources.AppResource.RegularIncomeExpenseSubtitleText);
+            Page newPage = new ViewRegularDataItemPage();
 
             string message = Constants.ADD_EDIT_REGULAR_DATA_ITEM_MESSAGE;
             MessagingCenter.Unsubscribe<ViewRegularDataItemPage>(this, message);

@@ -22,7 +22,7 @@ namespace Panda_Kakei.Views
         {
             InitializeComponent();
 
-            this.Title = title;
+            this.lblTitle.Text = title;
             this.categoryType = categoryType;
             this.categoryModel = new CategoryModel();
             this.BindingContext = this.categoryModel;

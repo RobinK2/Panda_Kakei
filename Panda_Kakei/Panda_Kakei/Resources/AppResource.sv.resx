@@ -441,7 +441,7 @@
     <comment>Regular income expense settings text</comment>
   </data>
   <data name="RegularIncomeExpenseSubtitleText" xml:space="preserve">
-    <value>Inkomster/Utgifter som framkommer varje månad</value>
+    <value>Inkomster/Utgifter som förekommer varje månad</value>
     <comment>Regular income expense description</comment>
   </data>
   <data name="RegularIncomeSettingsText" xml:space="preserve">

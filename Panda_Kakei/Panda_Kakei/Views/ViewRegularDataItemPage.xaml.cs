@@ -15,17 +15,15 @@ namespace Panda_Kakei.Views
     {
         private RegularDataItemModel regularDataItemModel;
 
-        public ViewRegularDataItemPage(string title, string subTitle)
+        public ViewRegularDataItemPage()
         {
             InitializeComponent();
 
-            this.Title = title;
             this.regularDataItemModel = new RegularDataItemModel();
             this.BindingContext = this.regularDataItemModel;
             btnAdd.IsEnabled = true;
             btnEdit.IsEnabled = false;
             btnRemove.IsEnabled = false;
-            lblSubTitle.Text = subTitle;
             loadRegularDataItemsFromDB();
         }
 

@@ -2,16 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Panda_Kakei"
-             x:Class="Panda_Kakei.Views.ViewRegularDataItemPage">
-
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="icon.png" />
-    </ContentPage.ToolbarItems>
+             x:Class="Panda_Kakei.Views.ViewRegularDataItemPage"
+             >
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="5">
+            <Label Text="{local:Translate RegularIncomeExpenseSettingsText}" FontSize="Large" 
+                   FontFamily="Humanist Sans-serif" TextColor="White" VerticalTextAlignment="Center"
+                   HorizontalOptions="StartAndExpand" />
+            <Image Source="icon.png" HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <Grid Padding="15, 25, 15, 15" RowSpacing="15">
+        <Grid Padding="15, 25, 15, 15" RowSpacing="10">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="0.7*" />
                 <RowDefinition Height="0.5*" />
                 <RowDefinition Height="4*" />
                 <RowDefinition Height="0.5*" />
@@ -25,7 +30,8 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label x:Name="lblSubTitle" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+            <Label x:Name="lblSubTitle" Text="{local:Translate RegularIncomeExpenseSubtitleText}" 
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.ColumnSpan="5" />
 
             <Label Text="{local:Translate CategoryText}" Grid.Row="1" Grid.Column="1" />

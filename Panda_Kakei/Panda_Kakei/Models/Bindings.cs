@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Globalization;
 using System.Text;
 using Panda_Kakei.Services;
 
@@ -45,7 +46,14 @@ namespace Panda_Kakei.Models
 
             DateTime date = new DateTime(int.Parse(dbDataItem.Year), int.Parse(dbDataItem.Month),
                 dbDataItem.Day);
-            DateText = date.ToString("m");
+            if(CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "ja")
+            {
+                DateText = date.ToString("m");
+            }
+            else
+            {
+                DateText = date.ToString("d MMM");
+            }
         }
 
         public Data DbDataItem { get; set; }
