@@ -314,6 +314,16 @@ namespace Panda_Kakei.Services
             dbConnection.DeleteAll<Data>();
         }
 
+        public void DeleteAllSettings()
+        {
+            dbConnection.DeleteAll<DataSettings>();
+        }
+
+        public void DeleteAllRegularDataItem()
+        {
+            dbConnection.DeleteAll<RegularData>();
+        }
+
         public List<Data> GetDataItemsOfPeriod(string month, string year)
         {
             try

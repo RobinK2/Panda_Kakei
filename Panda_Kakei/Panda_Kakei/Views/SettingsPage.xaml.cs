@@ -232,6 +232,10 @@ namespace Panda_Kakei.Views
                 {
                     // Remove all data in the database
                     SharedObject.dbManager.DeleteAllDataItems();
+                    // Remove all regular data in the database
+                    SharedObject.dbManager.DeleteAllRegularDataItem();
+                    // Remove all categoires in the data base
+                    SharedObject.dbManager.DeleteAllSettings();
                     // Refresh calculations on MainPage
                     MessagingCenter.Send<SettingsPage>(this, Constants.REFRESH_MAIN_PAGE_BALANCE_MESSAGE);
                 }
