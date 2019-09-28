@@ -73,6 +73,8 @@ namespace Panda_Kakei.Views
         {
             try
             {
+                btnGenerate.IsEnabled = false;
+
                 PermissionStatus status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Storage);
                 if (status != PermissionStatus.Granted)
                 {
@@ -107,6 +109,10 @@ namespace Panda_Kakei.Views
                 await DisplayAlert(Panda_Kakei.Resources.AppResource.ExcelPrintErrorTitle,
                     Panda_Kakei.Resources.AppResource.ExcelPrintErrorMessage + "\r\n" + exc.Message,
                     Panda_Kakei.Resources.AppResource.OkText);
+            }
+            finally
+            {
+                btnGenerate.IsEnabled = true;
             }
         }
     }
