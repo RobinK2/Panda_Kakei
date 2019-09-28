@@ -44,6 +44,8 @@ namespace Panda_Kakei.Views
         /// </summary>
         private void populateItemModel()
         {
+            pickerSort.MinimumWidthRequest = pickerSort.Width * 2;
+
             SortType sortType = SortType.DAY_ASCENDING;
             SortOption sortOption = (SortOption) pickerSort.SelectedItem;
             switch(sortOption.Value)
