@@ -10,7 +10,7 @@ namespace Panda_Kakei
 {
 	public partial class App : Application
 	{
-        private const string SYNCFUSION_LICENSE_KEY = "OTM0NjNAMzEzNzJlMzEyZTMwa0s2VlVmYjB4ZGQ4Vm45MzFnemhXeVVMeVpWbmFwaXJZR3hNZUc5ZnIraz0=";
+        private const string SYNCFUSION_LICENSE_KEY = "MjA0ODYwQDMxMzcyZTM0MmUzME5IQzJJY3RnZmJGMnhDNENKZlpMRDhLMnF1cnpjTTljWmZ2Tlk1bU1NeDA9";
         public App (string dbPath)
 		{
             //Register Syncfusion license

@@ -20,10 +20,10 @@
   <ItemGroup>
     <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
     <PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
-    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
-    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="17.1.0.52" />
-    <PackageReference Include="Syncfusion.Xamarin.XlsIO" Version="17.1.0.52" />
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.778463" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="17.4.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.XlsIO" Version="17.4.0.46" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991537" />
   </ItemGroup>
 
   <ItemGroup>
