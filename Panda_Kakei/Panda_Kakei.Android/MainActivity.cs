@@ -24,10 +24,10 @@ namespace Panda_Kakei.Droid
             CrossCurrentActivity.Current.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
-            string root = null;
+            string root;
             if (Android.OS.Environment.IsExternalStorageEmulated)
             {
-                root = Android.OS.Environment.ExternalStorageDirectory.ToString();
+                root = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDocuments).AbsolutePath;
             }
             else
             {
