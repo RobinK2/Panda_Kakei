@@ -27,7 +27,7 @@ namespace Panda_Kakei.Droid
             string root;
             if (Android.OS.Environment.IsExternalStorageEmulated)
             {
-                root = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDocuments).AbsolutePath;
+                root = Android.App.Application.Context.GetExternalFilesDir(null).AbsolutePath;
             }
             else
             {
